@@ -29,7 +29,7 @@ TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.buyPrice", {"Price.BasePrice"
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.displayName", LocKey(87885))
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.friendlyName", "Arasaka Phantom MK VI")
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.localizedDescription", LocKey(87895))
-TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.ArasakaPhantomLegendaryMKVI_inline0","Items.PingRefreshingAbility01","Items.StealthHacksCostAbility03","Items.MemoryRegenAbility04","Items.QuickHackDamageAbility03","Items.CooldownReductionAbility03","Items.QuickHackDurationAbility04","Items.UploadReductionAbility04"})
+TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.ArasakaPhantomLegendaryMKVI_inline0","Items.PingRefreshingAbility01","Items.StealthHacksCostAbility03","Items.MemoryRegenAbility04_M","Items.QuickHackDamageAbility03","Items.CooldownReductionAbility03","Items.QuickHackDurationAbility04_M","Items.UploadReductionAbility04_M"})
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Cyberdeck_ArasakaMKVI"})
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.statModifiers", {"Items.NetwatchNetdriverLegendaryMKV_inline0"})  -- Iconic
 

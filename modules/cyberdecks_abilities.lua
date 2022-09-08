@@ -1,4 +1,4 @@
--- ver. 1.3 - New Cyberdeck abilities
+-- ver. 1.7 - New Cyberdeck abilities
 
 -- Cooldown Reduction 04 START
 if TweakDB:GetRecord("Items.CooldownReductionAbility04_M") == nil then

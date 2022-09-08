@@ -30,7 +30,7 @@ TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.displayName", LocKey(87886))
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.friendlyName", "Militech Viper MK VI")
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.iconPath", "cw_system_militechcyberdeck")
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.localizedDescription", LocKey(87896))
-TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.MilitechViperLegendaryMKVI_inline1","Items.UltimateHacksSpreadAbility","Items.DamageHacksAreaAbility","Items.SpreadingRangeAbility05","Items.MemoryRegenAbility03","Items.UploadReductionAbility01","Items.CooldownReductionAbility04","Items.NPCUploadTimeAbility03"})
+TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.MilitechViperLegendaryMKVI_inline1","Items.UltimateHacksSpreadAbility","Items.DamageHacksAreaAbility","Items.SpreadingRangeAbility05_M","Items.MemoryRegenAbility03","Items.UploadReductionAbility01","Items.CooldownReductionAbility04_M","Items.NPCUploadTimeAbility03"})
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Cyberdeck_MilitechMKVI"})
 
 -- STATS
