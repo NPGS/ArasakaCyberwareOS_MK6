@@ -1,4 +1,4 @@
--- ver. 1.5 - LUA MODULES LOADER
+-- ver. 1.7 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
 
@@ -15,6 +15,7 @@ registerForEvent("onInit", function()
         require("modules/cyberdeck_c4mk6.lua")    -- MILITECH GUEST
         require("modules/cyberdeck_c5mk6.lua")
         require("modules/hyperbandwidthlink_leg.lua")
+        require("modules/sandevistan_c4mk6.lua")    -- MILITECH GUEST
         require("modules/sandevistan_c5mk3.lua")
         require("modules/sandevistan_c5mk6.lua")
         require("modules/sandevistan_c6mk3.lua")  -- FUYUTSUKI GUEST
