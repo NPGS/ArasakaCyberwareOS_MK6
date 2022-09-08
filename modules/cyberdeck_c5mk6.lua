@@ -1,4 +1,4 @@
--- ver. 1.2
+-- ver. 1.7
 
 -- Cyberdeck Arasaka Phantom Mk.6
 if TweakDB:GetRecord("Items.ArasakaPhantomLegendaryMKVI") == nil then
@@ -13,9 +13,9 @@ if TweakDB:GetRecord("Items.ArasakaPhantomLegendaryMKVI") == nil then
     TweakDB:CloneRecord("Price.Cyberdeck_ArasakaMKVI", "Price.Cyberdeck")
 
     -- VENDOR
-    TweakDB:CloneRecord("Vendors.pac_wwd_ripperdoc_01_inline25", "Vendors.pac_wwd_ripperdoc_01_inline0")
-    TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_inline25.item", "Items.ArasakaPhantomLegendaryMKVI")
-    addToList("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_inline25")
+    TweakDB:CloneRecord("Vendors.pac_wwd_ripperdoc_01_phantommk6", "Vendors.pac_wwd_ripperdoc_01_inline0")
+    TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_phantommk6.item", "Items.ArasakaPhantomLegendaryMKVI")
+    addToList("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_phantommk6")
 
 end
 
