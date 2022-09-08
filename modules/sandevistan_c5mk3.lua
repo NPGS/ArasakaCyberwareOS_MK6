@@ -18,9 +18,9 @@ if TweakDB:GetRecord("Items.SandevistanC5MK3") == nil then
         TweakDB:CloneRecord("Items.SandevistanC5MK3_inline9", "Items.HealOnKillEpic_inline6") -- uidata
 
     -- VENDOR
-    TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_sandyarasakamk3", "Vendors.cct_dtn_ripdoc_01_inline16")
-    TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_sandyarasakamk3.item", "Items.SandevistanC5MK3")
-    addToList("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_sandyarasakamk3")
+    TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3", "Vendors.cct_dtn_ripdoc_01_inline16")
+    TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3.item", "Items.SandevistanC5MK3")
+    addToList("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3")
 
 end
 

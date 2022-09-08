@@ -14,9 +14,9 @@ if TweakDB:GetRecord("Items.SandevistanC6MK3") == nil then
                     TweakDB:CloneRecord("Items.SandevistanC6MK3_inline8", "Items.SandevistanC1MK3_inline8") -- STAT MODIFIER
             TweakDB:CloneRecord("Items.SandevistanC6MK3_inline9", "Items.SandevistanC1MK3_inline9")     -- UIDATA
     -- VENDOR
-    TweakDB:CloneRecord("Vendors.wat_kab_ripperdoc_03_sandyninja", "Vendors.wat_kab_ripperdoc_03_inline1")
-    TweakDB:SetFlat("Vendors.wat_kab_ripperdoc_03_sandyninja.item", "Items.SandevistanC6MK3")
-    addToList("Vendors.wat_kab_ripperdoc_03.itemStock", "Vendors.wat_kab_ripperdoc_03_sandyninja")
+    TweakDB:CloneRecord("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3", "Vendors.wat_kab_ripperdoc_03_inline1")
+    TweakDB:SetFlat("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3.item", "Items.SandevistanC6MK3")
+    addToList("Vendors.wat_kab_ripperdoc_03.itemStock", "Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3")
 end
 
 -- OBJ

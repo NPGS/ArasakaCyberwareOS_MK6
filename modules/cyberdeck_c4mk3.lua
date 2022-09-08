@@ -10,9 +10,9 @@ if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
             TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline2", "Items.TetratronicEpicMKIII_inline2")   -- buffer size
 
     -- VENDOR
-    TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_militechmk3", "Vendors.wat_lch_ripperdoc_01_inline15")
-    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militechmk3.item", "Items.MilitechParalineEpicMKIII")
-    addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militechmk3")
+    TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_militech_mk3", "Vendors.wat_lch_ripperdoc_01_inline15")
+    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.item", "Items.MilitechParalineEpicMKIII")
+    addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militech_mk3")
 
 end
 

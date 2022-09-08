@@ -13,9 +13,9 @@ if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
     TweakDB:CloneRecord("Price.Cyberdeck_MilitechMKVI", "Price.Cyberdeck")
 
     -- VENDOR
-    TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_vipermk6", "Vendors.wat_lch_ripperdoc_01_inline15")
-    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_vipermk6.item", "Items.MilitechViperLegendaryMKVI")
-    addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_vipermk6")
+    TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_viper_mk6", "Vendors.wat_lch_ripperdoc_01_inline15")
+    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_viper_mk6.item", "Items.MilitechViperLegendaryMKVI")
+    addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_viper_mk6")
 
 end
 
