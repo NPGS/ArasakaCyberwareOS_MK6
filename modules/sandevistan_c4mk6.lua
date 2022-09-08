@@ -29,7 +29,7 @@ if TweakDB:GetRecord("Items.SandevistanC4MK6") == nil then
         TweakDB:CloneRecord("Items.SandevistanC4MK6_inline20", "Items.BerserkC2MK4_inline11") -- uidata
 
     -- PRICE
-    TweakDB:CloneRecord("Price.Sandevistan_MK6", "Price.Sandevistan")
+    TweakDB:CloneRecord("Price.Sandevistan_MK6_2", "Price.Sandevistan")
 
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wbr_hil_ripdoc_01_sandy_leopard_mk6", "Vendors.wbr_hil_ripdoc_01_inline0")
@@ -41,15 +41,15 @@ end
 
 -- OBJ
 TweakDB:SetFlat("Items.SandevistanC4MK6.cyberwareType", sandevistanCW)
-TweakDB:SetFlat("Items.SandevistanC4MK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6"})
+TweakDB:SetFlat("Items.SandevistanC4MK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_2"})
 TweakDB:SetFlat("Items.SandevistanC4MK6.displayName", LocKey(88541))
 TweakDB:SetFlat("Items.SandevistanC4MK6.OnEquip", {"Items.SandevistanBase_inline2","Items.SandevistanC4MK6_inline4","Items.SandevistanC4MK6_inline17","Items.SandevistanC4MK6_inline10"})
 TweakDB:SetFlat("Items.SandevistanC4MK6.localizedDescription", LocKey(88551))
-TweakDB:SetFlat("Items.SandevistanC4MK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6"})
+TweakDB:SetFlat("Items.SandevistanC4MK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_2"})
 TweakDB:SetFlat("Items.SandevistanC4MK6.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.SandevistanC4MK6_inline1","Items.SandevistanC4MK6_inline2","Items.SandevistanC4MK6_inline3","Items.SandevistanC4MK5_inline4"})
 
 -- STATS
-TweakDB:SetFlat("Price.Sandevistan_MK6.value", 30)
+TweakDB:SetFlat("Price.Sandevistan_MK6_2.value", 30)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline1.value", 14)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline2.value", 0.2)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline3.value", 14)
