@@ -76,5 +76,5 @@ TweakDB:SetFlat("Items.SandevistanC4MK6_inline17.effectors", {"Items.Sandevistan
     TweakDB:SetFlat("Items.SandevistanC4MK6_inline18.prereqRecord", "Items.SandevistanC3MK4_inline6")
         TweakDB:SetFlat("Items.SandevistanC4MK6_inline19.operationType", mltp)
         TweakDB:SetFlat("Items.SandevistanC4MK6_inline19.value", 1.25, 'Float')
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline17.UIData", "Items.SandevistanC4MK6_inline38")
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline17.UIData", "Items.SandevistanC4MK6_inline20")
     TweakDB:SetFlat("Items.SandevistanC4MK6_inline20.intValues", {25})
