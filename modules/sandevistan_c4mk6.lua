@@ -49,10 +49,10 @@ TweakDB:SetFlat("Items.SandevistanC4MK6.sellPrice", {"Price.BasePrice","Price.Cy
 TweakDB:SetFlat("Items.SandevistanC4MK6.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.SandevistanC4MK6_inline1","Items.SandevistanC4MK6_inline2","Items.SandevistanC4MK6_inline3","Items.SandevistanC4MK5_inline4"})
 
 -- STATS
-TweakDB:SetFlat("Price.Sandevistan_MK6_2.value", 30)
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline1.value", 14)
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline2.value", 0.2)
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline3.value", 14)
+TweakDB:SetFlat("Price.Sandevistan_MK6_2.value", 20)    -- price
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline1.value", 12)     -- duration
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline2.value", 0.2)    -- time scale
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline3.value", 15)     -- cooldown
 
 -- LOGIC PACKAGE 1 (DMG INCREASE)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline4.effectors", {"Items.SandevistanC4MK6_inline5"})
