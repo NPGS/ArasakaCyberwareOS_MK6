@@ -1,4 +1,4 @@
--- ver. 1.2
+-- ver. 1.7
 
 -- Sandevistan - Arasaka Trascendence (Legendary)
 if TweakDB:GetRecord("Items.SpecialSandevistanFragment2") == nil then
