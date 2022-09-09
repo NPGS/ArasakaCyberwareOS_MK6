@@ -15,12 +15,13 @@ if TweakDB:GetRecord("Items.SandevistanC4MK6") == nil then
             TweakDB:CloneRecord("Items.SandevistanC4MK6_inline7", "Items.SandevistanC3MK4_inline7") -- effector
         TweakDB:CloneRecord("Items.SandevistanC4MK6_inline8", "Items.SandevistanC3MK4_inline8") -- uidata
 
-    -- LOGIC PACKAGE 2 (CRIT CHANCE)
-    TweakDB:CloneRecord("Items.SandevistanC4MK6_inline10", "Items.SandevistanC1MK3_inline4")         -- LOGIC PACKAGE
-        TweakDB:CloneRecord("Items.SandevistanC4MK6_inline11", "Items.SandevistanC1MK3_inline5")     -- EFFECTOR EFFECTOR
-            TweakDB:CloneRecord("Items.SandevistanC4MK6_inline13", "Items.SandevistanC1MK3_inline7") -- STAT MODIFIER GROUP
-                TweakDB:CloneRecord("Items.SandevistanC4MK6_inline14", "Items.SandevistanC1MK3_inline8") -- STAT MODIFIER
-        TweakDB:CloneRecord("Items.SandevistanC4MK6_inline15", "Items.SandevistanC1MK3_inline9")     -- UIDATA
+    -- LOGIC PACKAGE 2 (CRIT CHANCE / DMG)
+    TweakDB:CloneRecord("Items.SandevistanC4MK6_inline10", "Items.SandevistanC4MK5_inline10")         -- LOGIC PACKAGE
+        TweakDB:CloneRecord("Items.SandevistanC4MK6_inline11", "Items.SandevistanC4MK5_inline11")     -- STAT GROUP EFFECTOR
+            TweakDB:CloneRecord("Items.SandevistanC4MK6_inline13", "Items.SandevistanC4MK5_inline13") -- STAT MODIFIER GROUP
+                TweakDB:CloneRecord("Items.SandevistanC4MK6_inline14", "Items.SandevistanC4MK5_inline14") -- STAT MODIFIER
+                TweakDB:CloneRecord("Items.SandevistanC4MK6_inline15", "Items.SandevistanC4MK5_inline15") -- STAT MODIFIER
+        TweakDB:CloneRecord("Items.SandevistanC4MK6_inline16", "Items.SandevistanC4MK5_inline16")     -- UIDATA
 
     -- LOGIC GROUP 3 (RANGED DAMAGE)
     TweakDB:CloneRecord("Items.SandevistanC4MK6_inline17", "Items.BerserkC2MK4_inline7") -- logic package
@@ -50,9 +51,9 @@ TweakDB:SetFlat("Items.SandevistanC4MK6.statModifiers", {"Items.SandevistanBase_
 
 -- STATS
 TweakDB:SetFlat("Price.Sandevistan_MK6_2.value", 20)    -- price
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline1.value", 12)     -- duration
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline1.value", 15)     -- duration
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline2.value", 0.2)    -- time scale
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline3.value", 15)     -- cooldown
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline3.value", 18)     -- cooldown
 
 -- LOGIC PACKAGE 1 (DMG INCREASE)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline4.effectors", {"Items.SandevistanC4MK6_inline5"})
@@ -62,13 +63,14 @@ TweakDB:SetFlat("Items.SandevistanC4MK6_inline4.effectors", {"Items.SandevistanC
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline4.UIData", "Items.SandevistanC4MK6_inline8")
     TweakDB:SetFlat("Items.SandevistanC4MK6_inline8.intValues", {25})
 
--- LOGIC PACKAGE 2 (CRIT CHANCE)
+-- LOGIC PACKAGE 2 (CRIT CHANCE / DMG)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline10.effectors", {"Items.SandevistanC4MK6_inline11"})
     TweakDB:SetFlat("Items.SandevistanC4MK6_inline11.statGroup", "Items.SandevistanC4MK6_inline13")
-        TweakDB:SetFlat("Items.SandevistanC4MK6_inline13.statModifiers", {"Items.SandevistanC4MK6_inline14"})
+        TweakDB:SetFlat("Items.SandevistanC4MK6_inline13.statModifiers", {"Items.SandevistanC4MK6_inline14","Items.SandevistanC4MK6_inline15"})
             TweakDB:SetFlat("Items.SandevistanC4MK6_inline14.value", 25)
-TweakDB:SetFlat("Items.SandevistanC4MK6_inline10.UIData", "Items.SandevistanC4MK6_inline15")
-    TweakDB:SetFlat("Items.SandevistanC4MK6_inline15.intValues", {25})
+            TweakDB:SetFlat("Items.SandevistanC4MK6_inline15.value", 25)
+TweakDB:SetFlat("Items.SandevistanC4MK6_inline10.UIData", "Items.SandevistanC4MK6_inline16")
+    TweakDB:SetFlat("Items.SandevistanC4MK6_inline16.intValues", {25, 25})
 
 -- LOGIC GROUP 3 (RANGED DAMAGE)
 TweakDB:SetFlat("Items.SandevistanC4MK6_inline17.effectors", {"Items.SandevistanC4MK6_inline18"})
