@@ -33,10 +33,9 @@ if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
     TweakDB:CloneRecord("Price.Sandevistan_MK6_2", "Price.Sandevistan")
 
     -- VENDOR
-    TweakDB:CloneRecord("Vendors.wbr_hil_ripdoc_01_sandy_leopard_mk6", "Vendors.wbr_hil_ripdoc_01_inline0")
-    TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_sandy_leopard_mk6.availabilityPrereq", "Vendors.CharterHillCredAvailability")
-    TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_sandy_leopard_mk6.item", "Items.MilitechSandevistanMK6")
-    addToList("Vendors.wbr_hil_ripdoc_01.itemStock", "Vendors.wbr_hil_ripdoc_01_sandy_leopard_mk6")
+    TweakDB:CloneRecord("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6", "Vendors.pac_wwd_ripperdoc_01_inline0")
+    TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6.item", "Items.MilitechSandevistanMK6")
+    addToList("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6")
 
 end
 
