@@ -26,8 +26,8 @@ end
 
 -- OBJ
 TweakDB:SetFlat("Items.SandevistanC5MK3.cyberwareType", sandevistanCW)
-TweakDB:SetFlat("Items.SandevistanC5MK3.displayName", LocKey(87881))
-TweakDB:SetFlat("Items.SandevistanC5MK3.localizedDescription", LocKey(87891))
+TweakDB:SetFlat("Items.SandevistanC5MK3.displayName", LocKey("ArasakaSandevistanMK3-Name"))
+TweakDB:SetFlat("Items.SandevistanC5MK3.localizedDescription", LocKey("ArasakaSandevistanMK3-Desc"))
 TweakDB:SetFlat("Items.SandevistanC5MK3.iconPath", "cwf_arasakasandevistan")
 TweakDB:SetFlat("Items.SandevistanC5MK3.OnEquip", {"Items.SandevistanBase_inline2","Items.SandevistanC5MK3_inline4"})
 TweakDB:SetFlat("Items.SandevistanC5MK3.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.SandevistanC5MK3_inline1","Items.SandevistanC5MK3_inline2","Items.SandevistanC5MK3_inline3"})

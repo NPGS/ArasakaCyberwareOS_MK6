@@ -11,7 +11,7 @@
 
 -- Functions: All credits for these goes to the CP77 Modding Community
 
-	-- addToList
+	-- addToList (credits Scissors (from basic mod tutorial))
 	function addToList(list, record)
 		recordhash = TweakDBID.new(record)
 		templist = TweakDB:GetFlat(list)
@@ -26,7 +26,7 @@
 		end
 	end
 
-	-- has_value
+	-- has_value (credits Scissors (from basic mod tutorial))
 	function has_value (tab, val)
     	for index, value in ipairs(tab) do
         	if value == val then
@@ -35,3 +35,17 @@
     	end
     	return false
 	end
+
+	-- StrLocKey (credits psiberx)
+	function StrLocKey(key)
+		if type(key) == "string" then
+		  return "LocKey#" .. tostring(LocKey(key).hash):gsub("ULL$", "")
+		end
+		if type(key) == "cdata" then
+		  return "LocKey#" .. tostring(key):gsub("ULL$", "")
+		end
+		if type(key) == "number" then
+		  return "LocKey#" .. tostring(key)
+		end
+		return ""
+	  end

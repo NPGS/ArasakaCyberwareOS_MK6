@@ -19,7 +19,7 @@ end
 -- OBJ
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.cyberwareType", cyberdeckCW)
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.blueprint", "Items.CyberdeckBlueprint6Slots")
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.displayName", LocKey(88531))
+TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.displayName", LocKey("MilitechCyberdeckMK3-Name"))
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.friendlyName", "Militech Paraline MK III")
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.iconPath", "cw_system_militechcyberdeck")
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.localizedDescription", LocKey(51730))

@@ -45,10 +45,10 @@ end
 -- OBJ
 TweakDB:SetFlat("Items.SandevistanC5MK6.cyberwareType", sandevistanCW)
 TweakDB:SetFlat("Items.SandevistanC5MK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6"})
-TweakDB:SetFlat("Items.SandevistanC5MK6.displayName", LocKey(87880))
+TweakDB:SetFlat("Items.SandevistanC5MK6.displayName", LocKey("ArasakaSandevistanMK6-Name"))
 TweakDB:SetFlat("Items.SandevistanC5MK6.OnEquip", {"Items.SandevistanBase_inline2","Items.SandevistanC5MK6_inline4","Items.SandevistanC5MK6_inline10","Items.SandevistanC5MK6_inline17"})
 TweakDB:SetFlat("Items.SandevistanC5MK6.iconPath", "cwf_arasakasandevistan")
-TweakDB:SetFlat("Items.SandevistanC5MK6.localizedDescription", LocKey(87890))
+TweakDB:SetFlat("Items.SandevistanC5MK6.localizedDescription", LocKey("ArasakaSandevistanMK6-Desc"))
 TweakDB:SetFlat("Items.SandevistanC5MK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6"})
 TweakDB:SetFlat("Items.SandevistanC5MK6.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.SandevistanC5MK6_inline1","Items.SandevistanC5MK6_inline2","Items.SandevistanC5MK6_inline3","Items.SandevistanC4MK5_inline4"})
 
