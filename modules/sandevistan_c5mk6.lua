@@ -40,6 +40,8 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
     TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6.item", "Items.ArasakaSandevistanMK6")
     addToList("Vendors.wbr_hil_ripdoc_01.itemStock", "Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6")
 
+    -- DEBUG
+    addToList("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK6")
 end
 
 -- OBJ

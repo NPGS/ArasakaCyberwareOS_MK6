@@ -20,6 +20,5 @@ registerForEvent("onInit", function()
         require("modules/sandevistan_c5mk6.lua")
         require("modules/sandevistan_c6mk3.lua")  -- FUYUTSUKI GUEST
         require("modules/trascendence_leg.lua")
-        require("modules/debug_items_arrays.lua")
 
 end)

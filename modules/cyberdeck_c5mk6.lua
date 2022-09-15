@@ -17,6 +17,8 @@ if TweakDB:GetRecord("Items.ArasakaPhantomLegendaryMKVI") == nil then
     TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_phantom_mk6.item", "Items.ArasakaPhantomLegendaryMKVI")
     addToList("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_phantom_mk6")
 
+    -- DEBUG
+    addToList("Debug.CW_Cyberdecks.items", "Items.ArasakaPhantomLegendaryMKVI")
 end
 
 -- PRICE

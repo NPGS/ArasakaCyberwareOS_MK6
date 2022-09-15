@@ -17,6 +17,8 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
     TweakDB:CloneRecord("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3", "Vendors.wat_kab_ripperdoc_03_inline1")
     TweakDB:SetFlat("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3.item", "Items.FuyutsukiSandevistanMK3")
     addToList("Vendors.wat_kab_ripperdoc_03.itemStock", "Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3")
+    -- DEBUG
+    addToList("Debug.CW_Sandevistans.items", "Items.FuyutsukiSandevistanMK3")
 end
 
 -- OBJ

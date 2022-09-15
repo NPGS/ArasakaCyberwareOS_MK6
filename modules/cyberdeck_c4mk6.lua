@@ -17,6 +17,8 @@ if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
     TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_viper_mk6.item", "Items.MilitechViperLegendaryMKVI")
     addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_viper_mk6")
 
+    -- DEBUG
+    addToList("Debug.CW_Cyberdecks.items", "Items.MilitechViperLegendaryMKVI")
 end
 
 -- PRICE
