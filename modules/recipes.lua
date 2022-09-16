@@ -20,7 +20,7 @@ if TweakDB:GetRecord("Items.Recipe_SpecialSandevistanFragment2") == nil then
         TweakDB:CloneRecord("Items.Recipe_SpecialSandevistanFragment2_inline0", "Items.Recipe_BerserkFragment2_inline0")
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.craftingResult", "Items.Recipe_SpecialSandevistanFragment2_inline0")
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.displayName", LocKey("Trascendence-Name"))
-    TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.iconPath", "cwf_sandevistan3")
+    TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.iconPath", "cwf_sandevistan2")
         TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2_inline0.item", "Items.SpecialSandevistanFragment2")
     TweakDB:CloneRecord("Vendors.wbr_jpn_ripperdoc_02_trasc_recipe", "Vendors.wbr_jpn_ripperdoc_02_inline0")
     TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_trasc_recipe.item", "Items.SpecialSandevistanFragment2")
