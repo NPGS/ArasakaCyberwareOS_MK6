@@ -1,4 +1,4 @@
--- ver. 1.7
+-- ver. 1.8
 
 -- Sandevistan "Hashishin" Arasaka Mk.6 Prototype
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
@@ -31,6 +31,12 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
                 TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline21", "Items.HealOnKillLegendary_inline3") -- stat pool update
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline22", "Items.HealOnKillLegendary_inline6") -- uidata
 
+    -- BLUEPRINT PROTOTYPE (1 SLOT)
+    TweakDB:CloneRecord("Items.SandevistanBlueprint_Prototype", "Items.SandevistanBlueprint")
+        TweakDB:CloneRecord("Items.SandevistanBlueprint_Prototype_inline0", "Items.SandevistanBlueprint_inline0")
+        TweakDB:SetFlat("Items.SandevistanBlueprint_Prototype.rootElement", "Items.SandevistanBlueprint_Prototype_inline0")
+        TweakDB:SetFlat("Items.SandevistanBlueprint_Prototype_inline0.childElements", {"Items.SandevistanBlueprint_inline1"})
+
     -- PRICE
     TweakDB:CloneRecord("Price.Sandevistan_MK6_A", "Price.Sandevistan")
 
@@ -46,6 +52,7 @@ end
 
 -- OBJ
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.cyberwareType", sandevistanCW)
+TweakDB:SetFlat("Items.ArasakaSandevistanMK6.blueprint", "Items.SandevistanBlueprint_Prototype")
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_A"})
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.displayName", LocKey("ArasakaSandevistanMK6-Name"))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.OnEquip", {"Items.SandevistanBase_inline2","Items.ArasakaSandevistanMK6_inline4","Items.ArasakaSandevistanMK6_inline10","Items.ArasakaSandevistanMK6_inline17"})
@@ -56,9 +63,9 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK6.statModifiers", {"Items.Sandevistan
 
 -- STATS
 TweakDB:SetFlat("Price.Sandevistan_MK6_A.value", 35)
-TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline1.value", 16)
-TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline2.value", 0.04)
-TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline3.value", 16)
+TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline1.value", 16)    -- duration
+TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline2.value", 0.04)  -- time dilation
+TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline3.value", 8)     -- cooldown
 
 -- LOGIC PACKAGE 1 (DMG INCREASE)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline4.effectors", {"Items.ArasakaSandevistanMK6_inline5"})

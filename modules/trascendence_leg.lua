@@ -19,6 +19,6 @@ TweakDB:SetFlat("Items.SpecialSandevistanFragment2.OnAttach", {"Items.SpecialSan
 TweakDB:SetFlat("Items.SpecialSandevistanFragment2.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.SpecialSandevistanFragment2.statModifiers", {"Items.SpecialSandevistanFragment2_inline2"})
     TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline0.UIData", "Items.SpecialSandevistanFragment2_inline1")
-        TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline1.floatValues", {0.9})
+        TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline1.floatValues", {2.0})
         TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline1.localizedDescription", StrLocKey("Trascendence-UIDesc"))
-    TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline2.value", -0.009)
+    TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline2.value", -0.02)
