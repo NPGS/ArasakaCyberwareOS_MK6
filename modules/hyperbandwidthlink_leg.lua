@@ -2,7 +2,7 @@
 
 -- Sandevistan - Arasaka Hyper Bandwidth Link (Legendary)
 if TweakDB:GetRecord("Items.SpecialSandevistanFragment1") == nil then
-    TweakDB:CloneRecord("Items.SpecialSandevistanFragment1", "Items.ArasakaSandevistanFragment1")
+    TweakDB:CloneRecord("Items.SpecialSandevistanFragment1", "Items.SandevistanFragment1")
         TweakDB:CloneRecord("Items.SpecialSandevistanFragment1_inline2", "Items.SandevistanFragment1_inline2")
         TweakDB:CloneRecord("Items.SpecialSandevistanFragment1_inline3", "Items.SandevistanFragment4_inline2")
     TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_hbl", "Vendors.cct_dtn_ripdoc_01_inline7")
