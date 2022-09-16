@@ -4,7 +4,6 @@
 if TweakDB:GetRecord("Items.Recipe_SpecialSandevistanFragment1") == nil then
     TweakDB:CloneRecord("Items.Recipe_SpecialSandevistanFragment1", "Items.Recipe_BerserkFragment2")
         TweakDB:CloneRecord("Items.Recipe_SpecialSandevistanFragment1_inline0", "Items.Recipe_BerserkFragment2_inline0")
-    TweakDB:SetFlat("Items.SpecialSandevistanFragment1.CraftingData", "Items.ArasakaSandevistanFragment1_inline6")
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment1.craftingResult", "Items.Recipe_SpecialSandevistanFragment1_inline0")
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment1.displayName", LocKey("HyperBandwidthLink-Name"))
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment1.iconPath", "cwf_sandevistan3")
@@ -20,7 +19,6 @@ end
 if TweakDB:GetRecord("Items.Recipe_SpecialSandevistanFragment2") == nil then
     TweakDB:CloneRecord("Items.Recipe_SpecialSandevistanFragment2", "Items.Recipe_BerserkFragment2")
         TweakDB:CloneRecord("Items.Recipe_SpecialSandevistanFragment2_inline0", "Items.Recipe_BerserkFragment2_inline0")
-    TweakDB:SetFlat("Items.SpecialSandevistanFragment2.CraftingData", "Items.ArasakaSandevistanFragment1_inline6")
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.craftingResult", "Items.Recipe_SpecialSandevistanFragment2_inline0")
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.displayName", LocKey("Trascendence-Name"))
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.iconPath", "cwf_sandevistan2")
