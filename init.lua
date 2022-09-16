@@ -1,4 +1,4 @@
--- ver. 1.7 - LUA MODULES LOADER
+-- ver. 1.8 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
 
@@ -20,5 +20,6 @@ registerForEvent("onInit", function()
         require("modules/sandevistan_c5mk6.lua")
         require("modules/sandevistan_c6mk3.lua")  -- FUYUTSUKI GUEST
         require("modules/trascendence_leg.lua")
+        require("modules/recipes.lua")
 
 end)
