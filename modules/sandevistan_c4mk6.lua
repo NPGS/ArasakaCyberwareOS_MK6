@@ -1,4 +1,4 @@
--- ver. 1.7
+-- ver. 1.8
 
 -- Sandevistan "Leopard" Militech Mk.6
 if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
@@ -35,10 +35,10 @@ if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
     -- VENDOR
     TweakDB:CloneRecord("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6", "Vendors.pac_wwd_ripperdoc_01_inline0")
     TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6.item", "Items.MilitechSandevistanMK6")
-    addToList("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6")
+    arrayInsert("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6")
 
     -- DEBUG
-    addToList("Debug.CW_Sandevistans.items", "Items.MilitechSandevistanMK6")
+    arrayInsert("Debug.CW_Sandevistans.items", "Items.MilitechSandevistanMK6")
 end
 
 -- OBJ

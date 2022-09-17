@@ -44,10 +44,10 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
     TweakDB:CloneRecord("Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6", "Vendors.wbr_hil_ripdoc_01_inline0")
     TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6.availabilityPrereq", "Vendors.CharterHillCredAvailability")
     TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6.item", "Items.ArasakaSandevistanMK6")
-    addToList("Vendors.wbr_hil_ripdoc_01.itemStock", "Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6")
+    arrayInsert("Vendors.wbr_hil_ripdoc_01.itemStock", "Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6")
 
     -- DEBUG
-    addToList("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK6")
+    arrayInsert("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK6")
 end
 
 -- OBJ

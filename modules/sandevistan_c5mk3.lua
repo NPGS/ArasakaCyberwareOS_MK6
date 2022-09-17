@@ -1,4 +1,4 @@
--- ver. 1.7
+-- ver. 1.8
 
 -- Sandevistan Arasaka Mk.3
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
@@ -20,10 +20,10 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
     -- VENDOR
     TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3", "Vendors.cct_dtn_ripdoc_01_inline16")
     TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3.item", "Items.ArasakaSandevistanMK3")
-    addToList("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3")
+    arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3")
 
     -- DEBUG
-    addToList("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK3")
+    arrayInsert("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK3")
 end
 
 -- OBJ

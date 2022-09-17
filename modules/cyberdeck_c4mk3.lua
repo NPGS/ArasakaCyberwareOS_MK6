@@ -1,4 +1,4 @@
--- ver. 1.7
+-- ver. 1.8
 
 -- Cyberdeck Militech Paraline Mk.3 (GUEST)
 if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
@@ -11,10 +11,10 @@ if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_militech_mk3", "Vendors.wat_lch_ripperdoc_01_inline15")
     TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.item", "Items.MilitechParalineEpicMKIII")
-    addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militech_mk3")
+    arrayInsert("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militech_mk3")
 
     -- DEBUG
-    addToList("Debug.CW_Cyberdecks.items", "Items.MilitechParalineEpicMKIII")
+    arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechParalineEpicMKIII")
 end
 
 -- OBJ

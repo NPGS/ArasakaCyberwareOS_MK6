@@ -1,4 +1,4 @@
--- ver. 1.7
+-- ver. 1.8
 
 -- BERSERK FIXES
 
@@ -24,7 +24,7 @@
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.refStat", "BaseStats.BerserkMeleeDamageBonus")
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.statType", "BaseStats.EffectiveDPS")
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.value", 0.01)
-		addToList("BaseStatusEffect.BerserkPlayerBuff_inline19.statModifiers", "BaseStatusEffect.BerserkPlayerBuff_melee_dmg")
+		arrayInsert("BaseStatusEffect.BerserkPlayerBuff_inline19.statModifiers", "BaseStatusEffect.BerserkPlayerBuff_melee_dmg")
 	end
 
 
@@ -36,14 +36,14 @@
 		TweakDB:SetFlat("Items.BerserkBase_inline4.value", 1)
 		TweakDB:SetFlat("Items.BerserkBase.statModifiers", {"Items.BerserkBase_inline3","Items.BerserkBase_inline4"})
 		TweakDB:SetFlat("BaseStatusEffect.BerserkCooldown_inline0.statModifiers", {"BaseStatusEffect.CyberwareCooldownDuration_inline0","BaseStatusEffect.BerserkCooldown_inline1","BaseStatusEffect.BerserkCooldown_inline2"})
-		addToList("Items.BerserkC1MK2.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC1MK3.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC2MK2.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC2MK3.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC2MK4.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC3MK4.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC3MK5.statModifiers", "Items.BerserkBase_inline4")
-		addToList("Items.BerserkC4MK5.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC1MK2.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC1MK3.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC2MK2.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC2MK3.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC2MK4.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC3MK4.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC3MK5.statModifiers", "Items.BerserkBase_inline4")
+		arrayInsert("Items.BerserkC4MK5.statModifiers", "Items.BerserkBase_inline4")
 	end
 
 

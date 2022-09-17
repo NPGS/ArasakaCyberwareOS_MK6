@@ -7,9 +7,9 @@ if TweakDB:GetRecord("Items.SpecialSandevistanFragment1") == nil then
         TweakDB:CloneRecord("Items.SpecialSandevistanFragment1_inline3", "Items.SandevistanFragment4_inline2")
     TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_hbl", "Vendors.cct_dtn_ripdoc_01_inline7")
     TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_hbl.item", "Items.SpecialSandevistanFragment1")
-    addToList("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_hbl")
-    addToList("Items.SpecialSandevistanFragment1.OnAttach", "Items.SandevistanFragment4_inline0")
-    addToList("Debug.CyberwareFragments.items", "Items.SpecialSandevistanFragment1")
+    arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_hbl")
+    arrayInsert("Items.SpecialSandevistanFragment1.OnAttach", "Items.SandevistanFragment4_inline0")
+    arrayInsert("Debug.CyberwareFragments.items", "Items.SpecialSandevistanFragment1")
 end
 TweakDB:SetFlat("Items.SpecialSandevistanFragment1.CraftingData", "Items.ArasakaSandevistanFragment1_inline6")
 TweakDB:SetFlat("Items.SpecialSandevistanFragment1.displayName", LocKey("HyperBandwidthLink-Name"))

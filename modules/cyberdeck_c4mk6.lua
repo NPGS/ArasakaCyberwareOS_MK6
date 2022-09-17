@@ -1,4 +1,4 @@
--- ver. 1.7
+-- ver. 1.8
 
 -- Cyberdeck Militech Viper Mk.6 (GUEST)
 if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
@@ -15,10 +15,10 @@ if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_viper_mk6", "Vendors.wat_lch_ripperdoc_01_inline15")
     TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_viper_mk6.item", "Items.MilitechViperLegendaryMKVI")
-    addToList("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_viper_mk6")
+    arrayInsert("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_viper_mk6")
 
     -- DEBUG
-    addToList("Debug.CW_Cyberdecks.items", "Items.MilitechViperLegendaryMKVI")
+    arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechViperLegendaryMKVI")
 end
 
 -- PRICE
