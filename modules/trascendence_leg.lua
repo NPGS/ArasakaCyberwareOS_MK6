@@ -8,8 +8,8 @@ if TweakDB:GetRecord("Items.SpecialSandevistanFragment2") == nil then
         TweakDB:CloneRecord("Items.SpecialSandevistanFragment2_inline2", "Items.SandevistanC4MK5_inline2")
     TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_trascendence", "Vendors.cct_dtn_ripdoc_01_inline7")
     TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_trascendence.item", "Items.SpecialSandevistanFragment2")
-    addToList("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_trascendence")
-    addToList("Debug.CyberwareFragments.items", "Items.SpecialSandevistanFragment2")
+    arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_trascendence")
+    arrayInsert("Debug.CyberwareFragments.items", "Items.SpecialSandevistanFragment2")
 end
 TweakDB:SetFlat("Items.SpecialSandevistanFragment2.CraftingData", "Items.ArasakaSandevistanFragment1_inline6")
 TweakDB:SetFlat("Items.SpecialSandevistanFragment2.displayName", LocKey("Trascendence-Name"))
@@ -20,5 +20,5 @@ TweakDB:SetFlat("Items.SpecialSandevistanFragment2.quality", "Quality.Legendary"
 TweakDB:SetFlat("Items.SpecialSandevistanFragment2.statModifiers", {"Items.SpecialSandevistanFragment2_inline2"})
     TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline0.UIData", "Items.SpecialSandevistanFragment2_inline1")
         TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline1.floatValues", {2.0})
-        TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline1.localizedDescription", "LocKey#"..tostring(LocKey("Trascendence-UIDesc").hash):gsub("ULL$", ""))
+        TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline1.localizedDescription", GetLocalizedTextByKey("Trascendence-UIDesc"))
     TweakDB:SetFlat("Items.SpecialSandevistanFragment2_inline2.value", -0.02)
