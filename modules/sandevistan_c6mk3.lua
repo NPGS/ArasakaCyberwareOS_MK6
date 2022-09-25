@@ -1,4 +1,4 @@
--- ver. 1.8
+-- ver. 1.9
 
 -- Sandevistan "Ninja" Fuyutsuki Mk.3
 if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
@@ -7,6 +7,7 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
     TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline1", "Items.SandevistanC2MK3_inline1")
     TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline2", "Items.SandevistanC2MK3_inline2")
     TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline3", "Items.SandevistanC2MK3_inline3")
+    TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_prereq", "Items.SandevistanC2MK3_inline0")
         -- CRIT CHANCE
         TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline4", "Items.SandevistanC1MK3_inline4")         -- LOGIC PACKAGE
             TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline5", "Items.SandevistanC1MK3_inline5")     -- EFFECTOR EFFECTOR
@@ -24,6 +25,7 @@ end
 -- OBJ
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.cyberwareType", sandevistanCW)
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.displayName", LocKey("FuyutsukiSandevistanMK3-Name"))
+TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.equipPrereqs", {"Items.FuyutsukiSandevistanMK3_prereq"})
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.localizedDescription", LocKey("FuyutsukiSandevistanMK3-Desc"))
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.iconPath", "cwf_sandevistan8")
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.OnEquip", {"Items.SandevistanBase_inline2","Items.FuyutsukiSandevistanMK3_inline4"})
@@ -36,6 +38,7 @@ TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline2.value", 0.3)    -- time d
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline3.value", 20)     -- cooldown
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline8.value", 30)     -- crit chance
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline9.intValues", {30})     -- crit chance UI
+TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_prereq.valueToCheck", 12)     -- equip requirement
 
 -- CRIT CHANCE
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline4.effectors", {"Items.FuyutsukiSandevistanMK3_inline5"})

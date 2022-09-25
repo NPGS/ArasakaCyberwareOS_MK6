@@ -1,4 +1,4 @@
--- ver. 1.8
+-- ver. 1.9
 
 -- Sandevistan Arasaka Mk.3
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
@@ -8,6 +8,7 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_inline1", "Items.SandevistanC2MK3_inline1") -- duration
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_inline2", "Items.SandevistanC2MK3_inline2") -- time
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_inline3", "Items.SandevistanC2MK3_inline3") -- cooldown
+    TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_prereq", "Items.SandevistanC2MK3_inline0") -- prereq
 
     -- LOGIC PACKAGE 3 (HEALING)
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_inline4", "Items.SandevistanC4MK5_inline5") -- logic package
@@ -29,6 +30,7 @@ end
 -- OBJ
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.cyberwareType", sandevistanCW)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.displayName", LocKey("ArasakaSandevistanMK3-Name"))
+TweakDB:SetFlat("Items.ArasakaSandevistanMK3.equipPrereqs", {"Items.ArasakaSandevistanMK3_prereq"})
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.localizedDescription", LocKey("ArasakaSandevistanMK3-Desc"))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.iconPath", "cwf_arasakasandevistan")
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.OnEquip", {"Items.SandevistanBase_inline2","Items.ArasakaSandevistanMK3_inline4"})
@@ -38,6 +40,7 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK3.statModifiers", {"Items.Sandevistan
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline1.value", 16)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline2.value", 0.4)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline3.value", 16)
+TweakDB:SetFlat("Items.ArasakaSandevistanMK3_prereq.valueToCheck", 12)
 
 -- LOGIC GROUP 3 (HEALING)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline4.effectors", {"Items.ArasakaSandevistanMK3_inline5"})
