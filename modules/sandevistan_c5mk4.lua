@@ -53,9 +53,11 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline4.effectors", {"Items.Arasaka
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline5.effectorToApply", "Items.ArasakaSandevistanMK4_inline6")
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline5.prereqRecord", "Items.ArasakaSandevistanMK4_inline7")
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline6.statPoolUpdates", {"Items.ArasakaSandevistanMK4_inline8"})
+            TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline8.statPoolValue", 8)
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline6.usePercent", true)
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline7.statusEffect", "BaseStatusEffect.SandevistanPlayerBuff")
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline4.UIData", "Items.ArasakaSandevistanMK4_inline9")
+    TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline9.intValues", {8})
 
 -- LOGIC PACKAGE 2 (DMG INCREASE)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.effectors", {"Items.ArasakaSandevistanMK4_inline11"})
@@ -64,4 +66,3 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.effectors", {"Items.Arasak
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.value", 1.08, 'Float')
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.UIData", "Items.ArasakaSandevistanMK4_inline13")
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline13.intValues", {8})
-
