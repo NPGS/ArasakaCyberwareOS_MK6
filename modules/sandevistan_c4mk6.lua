@@ -46,7 +46,7 @@ end
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.cyberwareType", sandevistanCW)
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_2"})
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.displayName", LocKey("MilitechSandevistanMK6-Name"))
-TweakDB:SetFlat("Items.MilitechSandevistanMK6.equipPrereqs", {})
+TweakDB:SetFlat("Items.MilitechSandevistanMK6.equipPrereqs", {"Items.MilitechSandevistanMK6_prereq"})
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.OnEquip", {"Items.SandevistanBase_inline2","Items.MilitechSandevistanMK6_inline4","Items.MilitechSandevistanMK6_inline17","Items.MilitechSandevistanMK6_inline10"})
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.localizedDescription", LocKey("MilitechSandevistanMK6-Desc"))
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_2"})
