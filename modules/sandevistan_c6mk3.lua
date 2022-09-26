@@ -23,7 +23,7 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
 end
 
 -- OBJ
-TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.cyberwareType", sandevistanCW)
+TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.cyberwareType", CName('Sandevistan'))
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.displayName", LocKey("FuyutsukiSandevistanMK3-Name"))
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.equipPrereqs", {"Items.FuyutsukiSandevistanMK3_prereq"})
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.localizedDescription", LocKey("FuyutsukiSandevistanMK3-Desc"))

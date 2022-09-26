@@ -1,4 +1,4 @@
--- ver. 1.8
+-- ver. 1.9
 
 -- Berserk Arasaka Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
@@ -56,7 +56,7 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
 end
 
 -- ASSIGN STATS
-TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", berserkCW)
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", CName('Berserk'))
 TweakDB:SetFlat("Price.Berserk_MK6.value", 30)
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.displayName", LocKey("ArasakaBerserkMK6-Name"))

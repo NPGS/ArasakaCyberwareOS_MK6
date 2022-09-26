@@ -28,7 +28,7 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
 end
 
 -- OBJ
-TweakDB:SetFlat("Items.ArasakaSandevistanMK3.cyberwareType", sandevistanCW)
+TweakDB:SetFlat("Items.ArasakaSandevistanMK3.cyberwareType", CName('Sandevistan'))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.displayName", LocKey("ArasakaSandevistanMK3-Name"))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.equipPrereqs", {"Items.ArasakaSandevistanMK3_prereq"})
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3.localizedDescription", LocKey("ArasakaSandevistanMK3-Desc"))

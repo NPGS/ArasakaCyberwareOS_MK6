@@ -52,7 +52,7 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
 end
 
 -- OBJ
-TweakDB:SetFlat("Items.ArasakaSandevistanMK6.cyberwareType", sandevistanCW)
+TweakDB:SetFlat("Items.ArasakaSandevistanMK6.cyberwareType", CName('Sandevistan'))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.blueprint", "Items.SandevistanBlueprint_Prototype")
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_A"})
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.displayName", LocKey("ArasakaSandevistanMK6-Name"))

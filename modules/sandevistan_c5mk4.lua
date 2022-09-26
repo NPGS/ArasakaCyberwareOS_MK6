@@ -13,10 +13,10 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK4") == nil then
     -- LOGIC PACKAGE 1 (HEALING)
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline4", "Items.SandevistanC4MK5_inline5") -- logic package
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline5", "Items.SandevistanC4MK5_inline6") -- apply effector effector
-            TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline6", "Items.HealOnKillEpic_inline2") -- effector
+            TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline6", "Items.HealOnKillLegendary_inline2") -- effector
             TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline7", "Items.BerserkC4MK5_inline10")   -- prereq
-                TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline8", "Items.HealOnKillEpic_inline3") -- stat pool update
-        TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline9", "Items.HealOnKillEpic_inline6") -- uidata
+                TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline8", "Items.HealOnKillLegendary_inline3") -- stat pool update
+        TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline9", "Items.HealOnKillLegendary_inline6") -- uidata
 
     -- LOGIC PACKAGE 2 (DMG INCREASE)
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK4_inline10", "Items.SandevistanC3MK4_inline4") -- logic package
@@ -34,7 +34,7 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK4") == nil then
 end
 
 -- OBJ
-TweakDB:SetFlat("Items.ArasakaSandevistanMK4.cyberwareType", sandevistanCW)
+TweakDB:SetFlat("Items.ArasakaSandevistanMK4.cyberwareType", CName('Sandevistan'))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4.displayName", LocKey("ArasakaSandevistanMK4-Name"))
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4.equipPrereqs", {"Items.ArasakaSandevistanMK4_prereq"})
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4.localizedDescription", LocKey("ArasakaSandevistanMK3-Desc"))
@@ -53,16 +53,14 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline4.effectors", {"Items.Arasaka
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline5.effectorToApply", "Items.ArasakaSandevistanMK4_inline6")
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline5.prereqRecord", "Items.ArasakaSandevistanMK4_inline7")
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline6.statPoolUpdates", {"Items.ArasakaSandevistanMK4_inline8"})
-            TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline8.statPoolValue", 8)
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline6.usePercent", true)
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline7.statusEffect", "BaseStatusEffect.SandevistanPlayerBuff")
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline4.UIData", "Items.ArasakaSandevistanMK4_inline9")
-    TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline9.intValues", {8})
 
 -- LOGIC PACKAGE 2 (DMG INCREASE)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.effectors", {"Items.ArasakaSandevistanMK4_inline11"})
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline11.effectorToApply", "Items.ArasakaSandevistanMK4_inline12")
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.operationType", mltp)
-        TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.value", 1.08, 'Float')
+        TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.value", 1.1, 'Float')
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.UIData", "Items.ArasakaSandevistanMK4_inline13")
-    TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline13.intValues", {8})
+    TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline13.intValues", {10})

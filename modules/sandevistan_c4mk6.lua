@@ -43,7 +43,7 @@ if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
 end
 
 -- OBJ
-TweakDB:SetFlat("Items.MilitechSandevistanMK6.cyberwareType", sandevistanCW)
+TweakDB:SetFlat("Items.MilitechSandevistanMK6.cyberwareType", CName('Sandevistan'))
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_2"})
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.displayName", LocKey("MilitechSandevistanMK6-Name"))
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.equipPrereqs", {"Items.MilitechSandevistanMK6_prereq"})
