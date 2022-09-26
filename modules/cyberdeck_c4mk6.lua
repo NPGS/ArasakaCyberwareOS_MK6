@@ -1,4 +1,4 @@
--- ver. 1.8
+-- ver. 1.9
 
 -- Cyberdeck Militech Viper Mk.6 (GUEST)
 if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
@@ -25,7 +25,7 @@ end
 TweakDB:SetFlat("Price.Cyberdeck_MilitechMKVI.value", 20)
 
 -- OBJ
-TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.cyberwareType", cyberdeckCW)
+TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.cyberwareType", CName('Cyberdeck'))
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.blueprint", "Items.CyberdeckBlueprint8Slots")
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Cyberdeck_MilitechMKVI"})
 TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.displayName", LocKey("MilitechCyberdeckMK6-Name"))

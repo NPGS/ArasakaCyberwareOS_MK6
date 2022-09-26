@@ -1,4 +1,4 @@
--- ver. 1.8
+-- ver. 1.9
 
 -- Cyberdeck Militech Paraline Mk.3 (GUEST)
 if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
@@ -18,7 +18,7 @@ if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
 end
 
 -- OBJ
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.cyberwareType", cyberdeckCW)
+TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.cyberwareType", CName('Cyberdeck'))
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.blueprint", "Items.CyberdeckBlueprint6Slots")
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.displayName", LocKey("MilitechCyberdeckMK3-Name"))
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.friendlyName", "Militech Paraline MK III")

@@ -1,4 +1,4 @@
--- ver. 1.8
+-- ver. 1.9
 
 -- Cyberdeck Arasaka Phantom Mk.6
 if TweakDB:GetRecord("Items.ArasakaPhantomLegendaryMKVI") == nil then
@@ -25,7 +25,7 @@ end
 TweakDB:SetFlat("Price.Cyberdeck_ArasakaMKVI.value", 22.5)
 
 -- OBJ
-TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.cyberwareType", cyberdeckCW)
+TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.cyberwareType", CName('Cyberdeck'))
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.blueprint", "Items.CyberdeckBlueprint8Slots")
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Cyberdeck_ArasakaMKVI"})
 TweakDB:SetFlat("Items.ArasakaPhantomLegendaryMKVI.displayName", LocKey("ArasakaCyberdeckMK6-Name"))
