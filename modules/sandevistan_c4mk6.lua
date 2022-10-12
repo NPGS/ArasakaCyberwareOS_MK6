@@ -1,4 +1,4 @@
--- ver. 1.9
+-- ver. 1.9.2
 
 -- Sandevistan "Leopard" Militech Mk.6
 if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
@@ -62,7 +62,7 @@ TweakDB:SetFlat("Items.MilitechSandevistanMK6_prereq.valueToCheck", 20)     -- e
 -- LOGIC PACKAGE 1 (DMG INCREASE)
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline4.effectors", {"Items.MilitechSandevistanMK6_inline5"})
     TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline5.effectorToApply", "Items.MilitechSandevistanMK6_inline7")
-        TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline7.operationType", mltp)
+        TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline7.operationType", 'Multiply')
         TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline7.value", 1.25, 'Float')
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline4.UIData", "Items.MilitechSandevistanMK6_inline8")
     TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline8.intValues", {25})
@@ -80,7 +80,7 @@ TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline10.UIData", "Items.MilitechS
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline17.effectors", {"Items.MilitechSandevistanMK6_inline18"})
     TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline18.effectorToApply", "Items.MilitechSandevistanMK6_inline19")
     TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline18.prereqRecord", "Items.SandevistanC3MK4_inline6")
-        TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline19.operationType", mltp)
+        TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline19.operationType", 'Multiply')
         TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline19.value", 1.25, 'Float')
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline17.UIData", "Items.MilitechSandevistanMK6_inline20")
     TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline20.intValues", {25})

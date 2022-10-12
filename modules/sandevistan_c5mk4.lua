@@ -1,4 +1,4 @@
--- ver. 1.9
+-- ver. 1.9.2
 
 -- Sandevistan Arasaka Mk.4
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK4") == nil then
@@ -60,7 +60,7 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline4.UIData", "Items.ArasakaSand
 -- LOGIC PACKAGE 2 (DMG INCREASE)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.effectors", {"Items.ArasakaSandevistanMK4_inline11"})
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline11.effectorToApply", "Items.ArasakaSandevistanMK4_inline12")
-        TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.operationType", mltp)
+        TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.operationType", 'Multiply')
         TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline12.value", 1.1, 'Float')
 TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline10.UIData", "Items.ArasakaSandevistanMK4_inline13")
     TweakDB:SetFlat("Items.ArasakaSandevistanMK4_inline13.intValues", {10})

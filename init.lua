@@ -1,11 +1,8 @@
--- ver. 1.9 - LUA MODULES LOADER
+-- ver. 1.9.2 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
 
     -- List all modules to load
-
-        -- Utilities
-        require("modules/utilities.lua")
 
         -- Cyberware
         require("modules/berserk_fixes.lua")
@@ -24,3 +21,9 @@ registerForEvent("onInit", function()
         require("modules/recipes.lua")
 
 end)
+
+function arrayInsert(arr, rec)
+	bakArray = TweakDB:GetFlat(arr)
+	table.insert(bakArray, TweakDBID.new(rec))
+	TweakDB:SetFlat(arr, bakArray)
+end

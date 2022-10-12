@@ -1,4 +1,4 @@
--- ver. 1.9.1
+-- ver. 1.9.2
 
 -- BERSERK FIXES
 
@@ -58,7 +58,7 @@
 			-- SET STATS
 			TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline0.effectors", {"Items.BerserkExtremeDmgReduction_inline1"})
 				TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline1.effectorToApply", "Items.BerserkExtremeDmgReduction_inline2")
-					TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline2.operationType", mltp)
+					TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline2.operationType", 'Multiply')
 					TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline2.value", 0.4, 'Float')
 			TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline0.UIData", "Items.BerserkExtremeDmgReduction_inline3")
 				TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline3.intValues", {60})	-- UIDATA

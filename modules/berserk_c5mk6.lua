@@ -1,4 +1,4 @@
--- ver. 1.9.1
+-- ver. 1.9.2
 
 -- Berserk Arasaka Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
@@ -107,7 +107,7 @@ TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline20.UIData", "Items.ArasakaBerserk
 -- LOGIC GROUP 4 => RANGED DAMAGE
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline35.effectors", {"Items.ArasakaBerserkMK6_inline36"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline36.effectorToApply", "Items.ArasakaBerserkMK6_inline37")
-        TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline37.operationType", mltp)
+        TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline37.operationType", 'Multiply')
         TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline37.value", 1.4, 'Float')
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline35.UIData", "Items.ArasakaBerserkMK6_inline38")
     TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline38.intValues", {40})
