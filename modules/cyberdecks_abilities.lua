@@ -1,4 +1,4 @@
--- ver. 1.7 - New Cyberdeck abilities
+-- ver. 1.10.0 - New Cyberdeck abilities
 
 -- Cooldown Reduction 04 START
 if TweakDB:GetRecord("Items.CooldownReductionAbility04_M") == nil then
@@ -11,6 +11,19 @@ if TweakDB:GetRecord("Items.CooldownReductionAbility04_M") == nil then
     TweakDB:SetFlat("Items.CooldownReductionAbility04_M_inline1.intValues", {60})
 end
 -- Cooldown Reduction 04 END
+
+
+-- Cooldown Reduction 05 START
+if TweakDB:GetRecord("Items.CooldownReductionAbility05_M") == nil then
+    TweakDB:CloneRecord("Items.CooldownReductionAbility05_M", "Items.CooldownReductionAbility03")
+    TweakDB:CloneRecord("Items.CooldownReductionAbility05_M_inline0", "Items.CooldownReductionAbility03_inline0")
+    TweakDB:CloneRecord("Items.CooldownReductionAbility05_M_inline1", "Items.CooldownReductionAbility03_inline1")
+    TweakDB:SetFlat("Items.CooldownReductionAbility05_M.stats", {"Items.CooldownReductionAbility05_M_inline0"})
+    TweakDB:SetFlat("Items.CooldownReductionAbility05_M.UIData", "Items.CooldownReductionAbility05_M_inline1")
+    TweakDB:SetFlat("Items.CooldownReductionAbility05_M_inline0.value", 0.75)
+    TweakDB:SetFlat("Items.CooldownReductionAbility05_M_inline1.intValues", {75})
+end
+-- Cooldown Reduction 05 END
 
 
 -- Memory Regen 04 START
@@ -54,6 +67,19 @@ end
 -- Spreading Range 05 END
 
 
+-- Ultimate Cost 04 START
+if TweakDB:GetRecord() == nil then
+    TweakDB:CloneRecord("Items.UltimateCostAbility04_M", "Items.UltimateCostAbility03")
+    TweakDB:CloneRecord("Items.UltimateCostAbility04_M_inline0", "Items.UltimateCostAbility03_inline0")
+    TweakDB:CloneRecord("Items.UltimateCostAbility04_M_inline1", "Items.UltimateCostAbility03_inline1")
+    TweakDB:SetFlat("Items.UltimateCostAbility04_M.stats", {"Items.UltimateCostAbility04_M_inline0"})
+    TweakDB:SetFlat("Items.UltimateCostAbility04_M.UIData", "Items.UltimateCostAbility04_M_inline1")
+    TweakDB:SetFlat("Items.UltimateCostAbility04_M_inline0.value", 4)
+    TweakDB:SetFlat("Items.UltimateCostAbility04_M_inline1.intValues", {4})
+end
+-- Ultimate Cost 04 END
+
+
 -- Upload Reduction 04 START
 if TweakDB:GetRecord("Items.UploadReductionAbility04_M") == nil then
     TweakDB:CloneRecord("Items.UploadReductionAbility04_M", "Items.UploadReductionAbility03")
@@ -65,6 +91,7 @@ if TweakDB:GetRecord("Items.UploadReductionAbility04_M") == nil then
     TweakDB:SetFlat("Items.UploadReductionAbility04_M_inline1.intValues", {90})
 end
 -- Upload Reduction 04 END
+
 
 -- Combat hacks spread
 TweakDB:SetFlat("Items.DamageHacksSpreadInitEffector.spreadCount", 3)
