@@ -12,7 +12,6 @@ if TweakDB:GetRecord("Items.CooldownReductionAbility04_M") == nil then
 end
 -- Cooldown Reduction 04 END
 
-
 -- Cooldown Reduction 05 START
 if TweakDB:GetRecord("Items.CooldownReductionAbility05_M") == nil then
     TweakDB:CloneRecord("Items.CooldownReductionAbility05_M", "Items.CooldownReductionAbility03")
@@ -24,7 +23,6 @@ if TweakDB:GetRecord("Items.CooldownReductionAbility05_M") == nil then
     TweakDB:SetFlat("Items.CooldownReductionAbility05_M_inline1.intValues", {75})
 end
 -- Cooldown Reduction 05 END
-
 
 -- Memory Regen 04 START
 if TweakDB:GetRecord("Items.MemoryRegenAbility04_M") == nil then
@@ -40,7 +38,6 @@ if TweakDB:GetRecord("Items.MemoryRegenAbility04_M") == nil then
 end
 -- Memory Regen 04 END
 
-
 -- Quickhack Damage 04 START
 if TweakDB:GetRecord("Items.QuickHackDamageAbility04_M") == nil then
     TweakDB:CloneRecord("Items.QuickHackDamageAbility04_M", "Items.QuickHackDamageAbility03")
@@ -52,7 +49,6 @@ if TweakDB:GetRecord("Items.QuickHackDamageAbility04_M") == nil then
     TweakDB:SetFlat("Items.QuickHackDamageAbility04_M_inline1.intValues", {40})
 end
 -- Quickhack Damage 04 END
-
 
 -- Quickhack Duration 04 START
 if TweakDB:GetRecord("Items.QuickHackDurationAbility04_M") == nil then
@@ -66,7 +62,6 @@ if TweakDB:GetRecord("Items.QuickHackDurationAbility04_M") == nil then
 end
 -- Quickhack Duration 04 END
 
-
 -- Spreading Range 05 START
 if TweakDB:GetRecord("Items.SpreadingRangeAbility05_M") == nil then
     TweakDB:CloneRecord("Items.SpreadingRangeAbility05_M", "Items.SpreadingRangeAbility03")
@@ -78,7 +73,6 @@ if TweakDB:GetRecord("Items.SpreadingRangeAbility05_M") == nil then
     TweakDB:SetFlat("Items.SpreadingRangeAbility05_M_inline1.intValues", {100})
 end
 -- Spreading Range 05 END
-
 
 -- Stealth Cost 04 START
 if TweakDB:GetRecord("Items.StealthHacksCostAbility04_M") == nil then
@@ -92,7 +86,6 @@ if TweakDB:GetRecord("Items.StealthHacksCostAbility04_M") == nil then
 end
 -- Stealth Cost 04 END
 
-
 -- Ultimate Cost 04 START
 if TweakDB:GetRecord("Items.UltimateCostAbility04_M") == nil then
     TweakDB:CloneRecord("Items.UltimateCostAbility04_M", "Items.UltimateCostAbility03")
@@ -104,7 +97,6 @@ if TweakDB:GetRecord("Items.UltimateCostAbility04_M") == nil then
     TweakDB:SetFlat("Items.UltimateCostAbility04_M_inline1.intValues", {4})
 end
 -- Ultimate Cost 04 END
-
 
 -- Upload Reduction 04 START
 if TweakDB:GetRecord("Items.UploadReductionAbility04_M") == nil then
@@ -129,6 +121,12 @@ end
 
 
 	-- NETWATCH NETDRIVER MK5 FIX
-	TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV_inline2.value", 12)	-- RAM
-	TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV_inline3.value", 10)	-- BUFFER
-	TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.NetwatchNetdriverLegendaryMKV_inline1","Items.DamageHacksAreaAbility","Items.QuickHackDamageAbility03","Items.MemoryRegenAbility03","Items.SpreadingRangeAbility03","Items.NPCUploadTimeAbility02"})
+	if TweakDB:GetRecord("Price.Cyberdeck_NetdriverMK5") == nil then
+		TweakDB:CloneRecord("Price.Cyberdeck_NetdriverMK5", "Price.Cyberdeck")
+		TweakDB:SetFlat("Price.Cyberdeck_NetdriverMK5.value", 10)
+		TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV_inline2.value", 12)	-- RAM
+		TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV_inline3.value", 10)	-- BUFFER
+		TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Cyberdeck_NetdriverMK5"})
+		TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.NetwatchNetdriverLegendaryMKV_inline1","Items.DamageHacksAreaAbility","Items.QuickHackDamageAbility03","Items.MemoryRegenAbility03","Items.SpreadingRangeAbility03","Items.NPCUploadTimeAbility02"})
+		TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Cyberdeck_NetdriverMK5"})
+	end
