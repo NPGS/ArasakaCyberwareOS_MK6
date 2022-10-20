@@ -10,7 +10,7 @@ if TweakDB:GetRecord("Items.TetratronicLegeMK6") == nil then
     TweakDB:SetFlat("Items.TetratronicLegeMK6.cyberwareType", CName('Cyberdeck'))
     TweakDB:SetFlat("Items.TetratronicLegeMK6.displayName", LocKey('TetratronicCyberdeckMK6-Name'))
     TweakDB:SetFlat("Items.TetratronicLegeMK6.friendlyName", "Tetratronic Rippler MK VI")
-    TweakDB:SetFlat("Items.TetratronicLegeMK6.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.TetratronicLegeMK6_inline0","Items.UltimateHacksSpreadAbility","Items.UltimateCostAbility04_M","Items.QuickHackDamageAbility04_M","Items.CooldownReductionAbility05_M","Items.UploadReductionAbility04_M"})
+    TweakDB:SetFlat("Items.TetratronicLegeMK6.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.TetratronicLegeMK6_inline0","Items.UltimateHacksSpreadAbility","Items.UltimateCostAbility04_M","Items.StealthHacksCostAbility04_M","Items.MemoryRegenAbility02","Items.QuickHackDamageAbility04_M","Items.CooldownReductionAbility05_M","Items.UploadReductionAbility04_M"})
         TweakDB:SetFlat("Items.TetratronicLegeMK6_inline0.stats", {"Items.TetratronicLegeMK6_inline1","Items.TetratronicLegeMK6_inline2"})
             TweakDB:SetFlat("Items.TetratronicLegeMK6_inline1.value", 16)
             TweakDB:SetFlat("Items.TetratronicLegeMK6_inline2.value", 12)

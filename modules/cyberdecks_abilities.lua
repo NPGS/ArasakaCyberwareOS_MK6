@@ -80,6 +80,19 @@ end
 -- Spreading Range 05 END
 
 
+-- Stealth Cost 04 START
+if TweakDB:GetRecord("Items.StealthHacksCostAbility04_M") == nil then
+    TweakDB:CloneRecord("Items.StealthHacksCostAbility04_M", "Items.StealthHacksCostAbility03")
+    TweakDB:CloneRecord("Items.StealthHacksCostAbility04_M_inline0", "Items.StealthHacksCostAbility03_inline0")
+    TweakDB:CloneRecord("Items.StealthHacksCostAbility04_M_inline1", "Items.StealthHacksCostAbility03_inline1")
+    TweakDB:SetFlat("Items.StealthHacksCostAbility04_M.stats", {"Items.StealthHacksCostAbility04_M_inline0"})
+    TweakDB:SetFlat("Items.StealthHacksCostAbility04_M.UIData", "Items.StealthHacksCostAbility04_M_inline1")
+    TweakDB:SetFlat("Items.StealthHacksCostAbility04_M_inline0.value", 4)
+    TweakDB:SetFlat("Items.StealthHacksCostAbility04_M_inline1.intValues", {4})
+end
+-- Stealth Cost 04 END
+
+
 -- Ultimate Cost 04 START
 if TweakDB:GetRecord("Items.UltimateCostAbility04_M") == nil then
     TweakDB:CloneRecord("Items.UltimateCostAbility04_M", "Items.UltimateCostAbility03")
