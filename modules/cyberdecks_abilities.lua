@@ -41,6 +41,19 @@ end
 -- Memory Regen 04 END
 
 
+-- Quickhack Damage 04 START
+if TweakDB:GetRecord("Items.QuickHackDamageAbility04_M") == nil then
+    TweakDB:CloneRecord("Items.QuickHackDamageAbility04_M", "Items.QuickHackDamageAbility03")
+    TweakDB:CloneRecord("Items.QuickHackDamageAbility04_M_inline0", "Items.QuickHackDamageAbility03_inline0")
+    TweakDB:CloneRecord("Items.QuickHackDamageAbility04_M_inline1", "Items.QuickHackDamageAbility03_inline1")
+    TweakDB:SetFlat("Items.QuickHackDamageAbility04_M.stats", {"Items.QuickHackDamageAbility04_M_inline0"})
+    TweakDB:SetFlat("Items.QuickHackDamageAbility04_M.UIData", "Items.QuickHackDamageAbility04_M_inline1")
+    TweakDB:SetFlat("Items.QuickHackDamageAbility04_M_inline0.value", 0.4)
+    TweakDB:SetFlat("Items.QuickHackDamageAbility04_M_inline1.intValues", {40})
+end
+-- Quickhack Damage 04 END
+
+
 -- Quickhack Duration 04 START
 if TweakDB:GetRecord("Items.QuickHackDurationAbility04_M") == nil then
     TweakDB:CloneRecord("Items.QuickHackDurationAbility04_M", "Items.QuickHackDurationAbility03")
