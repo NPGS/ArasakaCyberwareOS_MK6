@@ -1,4 +1,4 @@
--- ver. 1.9
+-- ver. 1.10.0
 
 -- Cyberdeck Militech Paraline Mk.3 (GUEST)
 if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
@@ -7,25 +7,21 @@ if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
         TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline0", "Items.TetratronicEpicMKIII_inline0")   -- logic package
             TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline1", "Items.TetratronicEpicMKIII_inline1")   -- ram memory size
             TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline2", "Items.TetratronicEpicMKIII_inline2")   -- buffer size
-
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_militech_mk3", "Vendors.wat_lch_ripperdoc_01_inline15")
     TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.item", "Items.MilitechParalineEpicMKIII")
     arrayInsert("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militech_mk3")
-
     -- DEBUG
     arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechParalineEpicMKIII")
 end
 
 -- OBJ
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.cyberwareType", CName('Cyberdeck'))
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.blueprint", "Items.CyberdeckBlueprint6Slots")
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.displayName", LocKey("MilitechCyberdeckMK3-Name"))
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.friendlyName", "Militech Paraline MK III")
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.iconPath", "cw_system_militechcyberdeck")
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.localizedDescription", LocKey(51730))
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.MilitechParalineEpicMKIII_inline0","Items.MemoryRegenAbility02","Items.QuickHackDurationAbility01","Items.CooldownReductionAbility02"})
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.statModifiers", {"Items.NetwatchNetdriverLegendaryMKV_inline0"})   -- Iconic
+TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.MilitechParalineEpicMKIII_inline0","Items.MemoryRegenAbility02","Items.CooldownReductionAbility02"})
 
 -- STATS
 TweakDB:SetFlat("Items.MilitechParalineEpicMKIII_inline0.stats", {"Items.MilitechParalineEpicMKIII_inline1", "Items.MilitechParalineEpicMKIII_inline2"})
