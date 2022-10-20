@@ -106,8 +106,16 @@ end
 -- Upload Reduction 04 END
 
 
--- Combat hacks spread
-TweakDB:SetFlat("Items.DamageHacksSpreadInitEffector.spreadCount", 3)
-TweakDB:SetFlat("QuickHack.BaseOverheatHack_inline3.spreadCount", 3)
-TweakDB:SetFlat("QuickHack.BrainMeltBaseHack_inline3.spreadCount", 3)
-TweakDB:SetFlat("QuickHack.OverloadBaseHack_inline6.spreadCount", 3)
+-- NETRUNNER FIXES
+
+    -- Combat hacks spread
+    TweakDB:SetFlat("Items.DamageHacksSpreadInitEffector.spreadCount", 3)
+    TweakDB:SetFlat("QuickHack.BaseOverheatHack_inline3.spreadCount", 3)
+    TweakDB:SetFlat("QuickHack.BrainMeltBaseHack_inline3.spreadCount", 3)
+    TweakDB:SetFlat("QuickHack.OverloadBaseHack_inline6.spreadCount", 3)
+
+
+	-- NETWATCH NETDRIVER MK5 FIX
+	TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV_inline2.value", 12)	-- RAM
+	TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV_inline3.value", 10)	-- BUFFER
+	TweakDB:SetFlat("Items.NetwatchNetdriverLegendaryMKV.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.NetwatchNetdriverLegendaryMKV_inline1","Items.DamageHacksAreaAbility","Items.QuickHackDamageAbility03","Items.MemoryRegenAbility03","Items.SpreadingRangeAbility03","Items.NPCUploadTimeAbility02"})
