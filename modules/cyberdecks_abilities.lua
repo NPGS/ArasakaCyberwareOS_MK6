@@ -81,7 +81,7 @@ end
 
 
 -- Ultimate Cost 04 START
-if TweakDB:GetRecord() == nil then
+if TweakDB:GetRecord("Items.UltimateCostAbility04_M") == nil then
     TweakDB:CloneRecord("Items.UltimateCostAbility04_M", "Items.UltimateCostAbility03")
     TweakDB:CloneRecord("Items.UltimateCostAbility04_M_inline0", "Items.UltimateCostAbility03_inline0")
     TweakDB:CloneRecord("Items.UltimateCostAbility04_M_inline1", "Items.UltimateCostAbility03_inline1")
