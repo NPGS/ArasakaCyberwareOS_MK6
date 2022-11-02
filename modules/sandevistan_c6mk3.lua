@@ -1,4 +1,4 @@
--- ver. 1.9
+-- ver. 1.11.1
 
 -- Sandevistan "Ninja" Fuyutsuki Mk.3
 if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
@@ -16,6 +16,7 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
             TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline9", "Items.SandevistanC1MK3_inline9")     -- UIDATA
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3", "Vendors.wat_kab_ripperdoc_03_inline1")
+    TweakDB:SetFlat("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3.availabilityPrereq", "Vendors.LateStartGameCredAvailability")
     TweakDB:SetFlat("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3.item", "Items.FuyutsukiSandevistanMK3")
     arrayInsert("Vendors.wat_kab_ripperdoc_03.itemStock", "Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3")
     -- DEBUG
