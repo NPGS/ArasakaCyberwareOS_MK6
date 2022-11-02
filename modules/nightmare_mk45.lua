@@ -1,4 +1,4 @@
--- ver. 1.11.0   Arasaka Nightmare Mk.4/5 (Hybrid Cyberdeck/Sandevistan Cyberware)
+-- ver. 1.11.0   Arasaka Nightmare Mk.4/5 (Hybrid Cyberdeck/Sandevistan OS)
 
 -- Arasaka Nightmare Mk.4
 if TweakDB:GetRecord("Items.ArasakaNightmareMK4_M") == nil then
@@ -9,6 +9,10 @@ if TweakDB:GetRecord("Items.ArasakaNightmareMK4_M") == nil then
             TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
             TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
             TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
+    TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_nightmare4", "Vendors.cct_dtn_ripdoc_01_inline16")  -- Vendor Item
+    arrayInsert("Items.ArasakaNightmareMK4_M.tags", CName('Cyberdeck')) -- Tags
+    arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_nightmare4")   -- Vendor list
+    arrayInsert("Debug.CW_Cyberdecks.items", "Items.ArasakaNightmareMK4_M") -- Debug
 end
 
 -- Arasaka Nightmare Mk.5
@@ -20,6 +24,10 @@ if TweakDB:GetRecord("Items.ArasakaNightmareMK5_M") == nil then
             TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
             TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
             TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
+    TweakDB:CloneRecord("Vendors.wbr_jpn_ripperdoc_02_nightmare5", "Vendors.wbr_jpn_ripperdoc_02_inline0")  -- Vendor Item
+    arrayInsert("Items.ArasakaNightmareMK5_M.tags", CName('Cyberdeck')) -- Tags
+    arrayInsert("Vendors.wbr_jpn_ripperdoc_02.itemStock", "Vendors.wbr_jpn_ripperdoc_02_nightmare5")    -- Vendor list
+    arrayInsert("Debug.CW_Cyberdecks.items", "Items.ArasakaNightmareMK5_M") -- Debug
 end
 
 local objActions = {
@@ -53,6 +61,7 @@ local objEquipMk5 = {
     "Items.BaseDeck_inline3",
     "Items.ArasakaNightmareMK5_M_inline0",
     "Items.DamageHacksAreaAbility",
+    "Items.QuickHackDamageAbility02",
     "Items.CooldownReductionAbility03",
     "Items.NPCUploadTimeAbility02"
 }
@@ -68,6 +77,7 @@ local objStatsMk4 = {
 local objStatsMk5 = {
     "Items.SandevistanBase_inline0",
     "Items.SandevistanBase_inline1",
+    "Items.TetratronicRipplerLegendaryMKIV_inline0",
     "Items.ArasakaNightmareMK5_M_inline3",
     "Items.ArasakaNightmareMK5_M_inline4",
     "Items.ArasakaNightmareMK5_M_inline5"
@@ -103,14 +113,13 @@ TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.objectActions", objActions)
 TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.OnEquip", objEquipMk4)
 TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.statModifiers", objStatsMk4)
-arrayInsert("Items.ArasakaNightmareMK4_M.tags", CName('Cyberdeck'))
     TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline0.stats", {"Items.ArasakaNightmareMK4_M_inline1","Items.ArasakaNightmareMK4_M_inline2"})
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline1.value", 8)   -- RAM
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline2.value", 7)   -- Buffer
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline3.value", 4)   -- Duration
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline4.value", 0.25)    -- Time Scale
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline5.value", 8)   -- Cooldown
-arrayInsert("Debug.CW_Cyberdecks.items", "Items.ArasakaNightmareMK4_M")
+TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_nightmare4.item", "Items.ArasakaNightmareMK4_M")
 
 -- SetFlats for Mk.5
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.cyberwareType", CName('Cyberdeck'))
@@ -123,11 +132,10 @@ TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.objectActions", objActions)
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.OnEquip", objEquipMk5)
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.statModifiers", objStatsMk5)
-arrayInsert("Items.ArasakaNightmareMK5_M.tags", CName('Cyberdeck'))
     TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline0.stats", {"Items.ArasakaNightmareMK5_M_inline1","Items.ArasakaNightmareMK5_M_inline2"})
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline1.value", 10)   -- RAM
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline2.value", 8)   -- Buffer
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline3.value", 4)   -- Duration
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline4.value", 0.25)    -- Time Scale
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline5.value", 8)   -- Cooldown
-arrayInsert("Debug.CW_Cyberdecks.items", "Items.ArasakaNightmareMK5_M")
+TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_nightmare5.item", "Items.ArasakaNightmareMK5_M")

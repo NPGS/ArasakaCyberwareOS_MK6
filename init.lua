@@ -1,4 +1,4 @@
--- ver. 1.10.0 - LUA MODULES LOADER
+-- ver. 1.11.0 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
     require("modules/berserk_fixes.lua")
@@ -9,6 +9,7 @@ registerForEvent("onInit", function()
     require("modules/cyberdeck_c5mk6.lua")
     require("modules/cyberdeck_ttmk6.lua")  -- TETRATRONIC GUEST
     require("modules/hyperbandwidthlink_leg.lua")
+    require("modules/nightmare_mk45.lua")
     require("modules/sandevistan_c4mk6.lua")    -- MILITECH GUEST
     require("modules/sandevistan_c5mk3.lua")
     require("modules/sandevistan_c5mk4.lua")
