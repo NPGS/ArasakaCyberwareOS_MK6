@@ -1,4 +1,4 @@
--- ver. 1.9.2
+-- ver. 1.11.1
 
 -- Berserk Arasaka Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
@@ -47,7 +47,7 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
 
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wbr_hil_ripdoc_01_zerk_mk6", "Vendors.wbr_hil_ripdoc_01_inline0")
-    TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_zerk_mk6.availabilityPrereq", "Vendors.CharterHillCredAvailability")
+    TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_zerk_mk6.availabilityPrereq", "Vendors.DowntownCredAvailability")
     TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_zerk_mk6.item", "Items.ArasakaBerserkMK6")
     arrayInsert("Vendors.wbr_hil_ripdoc_01.itemStock", "Vendors.wbr_hil_ripdoc_01_zerk_mk6")
 

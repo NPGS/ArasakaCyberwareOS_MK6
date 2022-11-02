@@ -1,4 +1,4 @@
--- ver. 1.11.0   Arasaka Nightmare Mk.4/5 (Hybrid Cyberdeck/Sandevistan OS)
+-- ver. 1.11.1   Arasaka Nightmare Mk.4/5 (Hybrid Cyberdeck/Sandevistan OS)
 
 -- Arasaka Nightmare Mk.4
 if TweakDB:GetRecord("Items.ArasakaNightmareMK4_M") == nil then
@@ -162,6 +162,7 @@ TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.statModifiers", objStatsMk4)
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline4.value", 0.25)    -- Time Scale
         TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline5.value", 8)   -- Cooldown
 TweakDB:SetFlat("Price.Cyberdeck_NM4.value", 8)
+TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_nightmare4.availabilityPrereq", "Vendors.EndGameCredAvailability")
 TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_nightmare4.item", "Items.ArasakaNightmareMK4_M")
 
 -- SetFlats for Mk.5
@@ -184,4 +185,5 @@ TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.statModifiers", objStatsMk5)
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline4.value", 0.25)    -- Time Scale
         TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline5.value", 8)   -- Cooldown
 TweakDB:SetFlat("Price.Cyberdeck_NM5.value", 15)
+TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_nightmare5.availabilityPrereq", "Vendors.DowntownCredAvailability")
 TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_nightmare5.item", "Items.ArasakaNightmareMK5_M")

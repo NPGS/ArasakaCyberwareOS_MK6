@@ -1,4 +1,4 @@
--- ver. 1.10.0
+-- ver. 1.11.1
 
 -- Cyberdeck Militech Paraline Mk.3 (GUEST)
 if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
@@ -9,6 +9,7 @@ if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
             TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline2", "Items.TetratronicEpicMKIII_inline2")   -- buffer size
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_militech_mk3", "Vendors.wat_lch_ripperdoc_01_inline15")
+    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.availabilityPrereq", "Vendors.LateStartGameCredAvailability")
     TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.item", "Items.MilitechParalineEpicMKIII")
     arrayInsert("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militech_mk3")
     -- DEBUG

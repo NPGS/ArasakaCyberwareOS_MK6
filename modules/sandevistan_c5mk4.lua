@@ -1,4 +1,4 @@
--- ver. 1.9.2
+-- ver. 1.11.1
 
 -- Sandevistan Arasaka Mk.4
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK4") == nil then
@@ -26,6 +26,7 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK4") == nil then
 
     -- VENDOR
     TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk4", "Vendors.cct_dtn_ripdoc_01_inline16")
+    TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk4.availabilityPrereq", "Vendors.LateMidGameCredAvailability")
     TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk4.item", "Items.ArasakaSandevistanMK4")
     arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk4")
 

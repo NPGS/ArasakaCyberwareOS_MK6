@@ -1,4 +1,4 @@
--- ver. 1.9.2
+-- ver. 1.11.1
 
 -- Sandevistan "Leopard" Militech Mk.6
 if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
@@ -35,6 +35,7 @@ if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
 
     -- VENDOR
     TweakDB:CloneRecord("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6", "Vendors.pac_wwd_ripperdoc_01_inline0")
+    TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6.availabilityPrereq", "Vendors.DowntownCredAvailability")
     TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6.item", "Items.MilitechSandevistanMK6")
     arrayInsert("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_sandy_leopard_mk6")
 

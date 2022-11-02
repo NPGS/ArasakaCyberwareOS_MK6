@@ -1,4 +1,4 @@
--- ver. 1.9
+-- ver. 1.11.1
 
 -- Cyberdeck Arasaka Phantom Mk.6
 if TweakDB:GetRecord("Items.ArasakaPhantomLegendaryMKVI") == nil then
@@ -14,6 +14,7 @@ if TweakDB:GetRecord("Items.ArasakaPhantomLegendaryMKVI") == nil then
 
     -- VENDOR
     TweakDB:CloneRecord("Vendors.pac_wwd_ripperdoc_01_phantom_mk6", "Vendors.pac_wwd_ripperdoc_01_inline0")
+    TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_phantom_mk6.availabilityPrereq", "Vendors.DowntownCredAvailability")
     TweakDB:SetFlat("Vendors.pac_wwd_ripperdoc_01_phantom_mk6.item", "Items.ArasakaPhantomLegendaryMKVI")
     arrayInsert("Vendors.pac_wwd_ripperdoc_01.itemStock", "Vendors.pac_wwd_ripperdoc_01_phantom_mk6")
 

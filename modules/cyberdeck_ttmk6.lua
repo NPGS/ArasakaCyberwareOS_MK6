@@ -1,4 +1,4 @@
--- ver. 1.10.0
+-- ver. 1.11.1
 
 -- Cyberdeck Tetratronic Rippler MK.6
 if TweakDB:GetRecord("Items.TetratronicLegeMK6") == nil then
@@ -19,6 +19,7 @@ if TweakDB:GetRecord("Items.TetratronicLegeMK6") == nil then
             TweakDB:SetFlat("Items.TetratronicLegeMK6_inline2.value", 12)
             TweakDB:SetFlat("Price.Cyberdeck_TetratronicMK6.value", 20)
     TweakDB:CloneRecord("Vendors.TetratronicRipplerMK6", "Vendors.bls_ina_se1_ripperdoc_01_inline0")
+    TweakDB:SetFlat("Vendors.TetratronicRipplerMK6.availabilityPrereq", "Vendors.DowntownCredAvailability")
     TweakDB:SetFlat("Vendors.TetratronicRipplerMK6.item", "Items.TetratronicLegeMK6")
     arrayInsert("Vendors.bls_ina_se1_ripperdoc_01.itemStock", "Vendors.TetratronicRipplerMK6")
     arrayInsert("Debug.CW_Cyberdecks.items", "Items.TetratronicLegeMK6")
