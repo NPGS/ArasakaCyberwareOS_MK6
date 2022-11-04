@@ -9,10 +9,10 @@ if TweakDB:GetRecord("Items.FuyutsukiCyberdeckMK2_SM") == nil then
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
-    TweakDB:CloneRecord("Price.Cyberdeck_LG2", "Price.Cyberdeck")   -- Price
-    TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_lightning2", "Vendors.cct_dtn_ripdoc_01_inline16")  -- Vendor Item
+    TweakDB:CloneRecord("Price.Cyberdeck_MK2S", "Price.Cyberdeck")   -- Price
+    TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S", "Vendors.wat_lch_ripperdoc_01_inline14")  -- Vendor Item
     arrayInsert("Items.FuyutsukiCyberdeckMK2_SM.tags", CName('Cyberdeck')) -- Tags
-    arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_lightning2")   -- Vendor list
+    arrayInsert("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S")   -- Vendor list
     arrayInsert("Debug.CW_Cyberdecks.items", "Items.FuyutsukiCyberdeckMK2_SM") -- Debug
 end
 
@@ -25,10 +25,10 @@ if TweakDB:GetRecord("Items.FuyutsukiCyberdeckMK3_SM") == nil then
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK3_SM_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK3_SM_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK3_SM_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
-    TweakDB:CloneRecord("Price.Cyberdeck_LG3", "Price.Cyberdeck")   -- Price
-    TweakDB:CloneRecord("Vendors.wbr_jpn_ripperdoc_02_lightning3", "Vendors.wbr_jpn_ripperdoc_02_inline0")  -- Vendor Item
+    TweakDB:CloneRecord("Price.Cyberdeck_MK3S", "Price.Cyberdeck")   -- Price
+    TweakDB:CloneRecord("Vendors.wat_nid_ripperdoc_01_fuyDeckMK3S", "Vendors.wat_nid_ripperdoc_01_inline1")  -- Vendor Item
     arrayInsert("Items.FuyutsukiCyberdeckMK3_SM.tags", CName('Cyberdeck')) -- Tags
-    arrayInsert("Vendors.wbr_jpn_ripperdoc_02.itemStock", "Vendors.wbr_jpn_ripperdoc_02_lightning3")    -- Vendor list
+    arrayInsert("Vendors.wat_nid_ripperdoc_01.itemStock", "Vendors.wat_nid_ripperdoc_01_fuyDeckMK3S")    -- Vendor list
     arrayInsert("Debug.CW_Cyberdecks.items", "Items.FuyutsukiCyberdeckMK3_SM") -- Debug
 end
 
@@ -98,7 +98,7 @@ local nm2Price = {
     "Price.Cyberware",
     "Price.CyberwareQualityMultiplier",
     "Price.IconicMultiplier",
-    "Price.Cyberdeck_LG2"
+    "Price.Cyberdeck_MK2S"
 }
 
 local nm2SellPrice = {
@@ -108,7 +108,7 @@ local nm2SellPrice = {
     "Price.CyberwareQualityMultiplier",
     "Price.CraftingTraitMultiplier",
     "Price.IconicMultiplier",
-    "Price.Cyberdeck_LG2"
+    "Price.Cyberdeck_MK2S"
 }
 
 local nm3Price = {
@@ -117,7 +117,7 @@ local nm3Price = {
     "Price.Cyberware",
     "Price.CyberwareQualityMultiplier",
     "Price.IconicMultiplier",
-    "Price.Cyberdeck_LG3"
+    "Price.Cyberdeck_MK3S"
 }
 
 local nm3SellPrice = {
@@ -127,7 +127,7 @@ local nm3SellPrice = {
     "Price.CyberwareQualityMultiplier",
     "Price.CraftingTraitMultiplier",
     "Price.IconicMultiplier",
-    "Price.Cyberdeck_LG3"
+    "Price.Cyberdeck_MK3S"
 }
 
 -- Fuyutsuki Electronics Mk.2-S
@@ -150,9 +150,9 @@ TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.statModifiers", objStatsMk2)
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline3.value", 4)   -- Duration
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline4.value", 0.5)    -- Time Scale
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline5.value", 8)   -- Cooldown
-TweakDB:SetFlat("Price.Cyberdeck_LG2.value", 6.5)
-TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_lightning2.availabilityPrereq", "Vendors.EarlyMidGameCredAvailability")
-TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_lightning2.item", "Items.FuyutsukiCyberdeckMK2_SM")
+TweakDB:SetFlat("Price.Cyberdeck_MK2S.value", 6.5)
+TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S.availabilityPrereq", "Vendors.EarlyStartGameCredAvailability")
+TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S.item", "Items.FuyutsukiCyberdeckMK2_SM")
 
 -- Fuyutsuki Electronics Mk.3-S
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.blueprint", "Items.CyberdeckBlueprint5Slots")
@@ -174,6 +174,6 @@ TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.statModifiers", objStatsMk3)
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM_inline3.value", 4)   -- Duration
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM_inline4.value", 0.5)    -- Time Scale
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM_inline5.value", 8)   -- Cooldown
-TweakDB:SetFlat("Price.Cyberdeck_LG3.value", 7.5)
-TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_lightning3.availabilityPrereq", "Vendors.LateStartGameCredAvailability")
-TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_lightning3.item", "Items.FuyutsukiCyberdeckMK3_SM")
+TweakDB:SetFlat("Price.Cyberdeck_MK3S.value", 7.5)
+TweakDB:SetFlat("Vendors.wat_nid_ripperdoc_01_fuyDeckMK3S.availabilityPrereq", "Vendors.EarlyMidGameCredAvailability")
+TweakDB:SetFlat("Vendors.wat_nid_ripperdoc_01_fuyDeckMK3S.item", "Items.FuyutsukiCyberdeckMK3_SM")
