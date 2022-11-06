@@ -1,4 +1,4 @@
--- ver. 1.11.1
+-- ver. 1.12.0
 
 -- Sandevistan "Ninja" Fuyutsuki Mk.3
 if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
@@ -22,7 +22,6 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
     -- DEBUG
     arrayInsert("Debug.CW_Sandevistans.items", "Items.FuyutsukiSandevistanMK3")
 end
-
 -- OBJ
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.cyberwareType", CName('Sandevistan'))
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.displayName", LocKey("FuyutsukiSandevistanMK3-Name"))
@@ -32,15 +31,13 @@ TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.iconPath", "cwf_sandevistan8")
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.OnEquip", {"Items.SandevistanBase_inline2","Items.FuyutsukiSandevistanMK3_inline4"})
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.FuyutsukiSandevistanMK3_inline1","Items.FuyutsukiSandevistanMK3_inline2","Items.FuyutsukiSandevistanMK3_inline3","Items.FuyutsuiTinkererLegendaryMKIII_inline0"})
-
 -- STATS
-TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline1.value", 18)     -- duration
+TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline1.value", 16)     -- duration
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline2.value", 0.3)    -- time dilation
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline3.value", 20)     -- cooldown
-TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline8.value", 30)     -- crit chance
-TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline9.intValues", {30})     -- crit chance UI
+TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline8.value", 20)     -- crit chance
+TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline9.intValues", {20})     -- crit chance UI
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_prereq.valueToCheck", 12)     -- equip requirement
-
 -- CRIT CHANCE
 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline4.effectors", {"Items.FuyutsukiSandevistanMK3_inline5"})
     TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline5.statGroup", "Items.FuyutsukiSandevistanMK3_inline7")
