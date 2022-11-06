@@ -80,6 +80,7 @@ local objEquipMk5 = {
     "Items.DamageHacksAreaAbility",
     "Items.QuickHackDamageAbility02",
     "Items.CooldownReductionAbility03",
+    "Items.QuickHackDurationAbility03",
     "Items.NPCUploadTimeAbility02"
 }
 
@@ -91,6 +92,7 @@ local objEquipRageMk5 = {
     "Items.UltimateHacksSpreadAbility",
     "Items.DamageHacksAreaAbility",
     "Items.MemoryRegenAbility03",
+    "Items.SpreadingRangeAbility03",
     "Items.NPCUploadTimeAbility02"
 }
 
