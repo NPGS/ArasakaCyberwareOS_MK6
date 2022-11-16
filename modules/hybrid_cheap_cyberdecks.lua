@@ -1,4 +1,4 @@
--- ver. 1.12.0   Fuyutsuki Electronics Mk.2/3-S (Hybrid Cyberdeck/Sandevistan OS)
+-- ver. 1.12.1   Fuyutsuki Electronics Mk.2/3-S (Hybrid Cyberdeck/Sandevistan OS)
 
 -- Fuyutsuki Electronics Mk.2-S
 if TweakDB:GetRecord("Items.FuyutsukiCyberdeckMK2_SM") == nil then
@@ -9,6 +9,7 @@ if TweakDB:GetRecord("Items.FuyutsukiCyberdeckMK2_SM") == nil then
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
             TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
+            TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline6", "Items.SandevistanC1MK1_inline0")  -- Prereq
     TweakDB:CloneRecord("Price.Cyberdeck_MK2S", "Price.Cyberdeck")   -- Price
     TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S", "Vendors.wat_lch_ripperdoc_01_inline14")  -- Vendor Item
     arrayInsert("Items.FuyutsukiCyberdeckMK2_SM.tags", CName('Cyberdeck')) -- Tags
@@ -135,7 +136,7 @@ TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.blueprint", "Items.CyberdeckBlue
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.buyPrice", nm2Price)
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.cyberwareType", CName('Cyberdeck'))
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.displayName", LocKey("FuyutsukiCyberdeckMK2S-Name"))
-TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.equipPrereqs", {})
+TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.equipPrereqs", {"Items.FuyutsukiCyberdeckMK2_SM_inline6"})
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.friendlyName", "Fuyutsuki Mk.II-S")
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.iconPath", "cw_system_fuyutsuicyberdeck")
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.localizedDescription", LocKey("FuyutsukiCyberdeckMKS-Desc-Universal"))
@@ -150,6 +151,7 @@ TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM.statModifiers", objStatsMk2)
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline3.value", 4)   -- Duration
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline4.value", 0.5)    -- Time Scale
         TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline5.value", 8)   -- Cooldown
+        TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK2_SM_inline6.valueToCheck", 6)   -- Prereq
 TweakDB:SetFlat("Price.Cyberdeck_MK2S.value", 6.5)
 TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S.availabilityPrereq", "Vendors.EarlyStartGameCredAvailability")
 TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S.item", "Items.FuyutsukiCyberdeckMK2_SM")
@@ -159,7 +161,7 @@ TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.blueprint", "Items.CyberdeckBlue
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.buyPrice", nm3Price)
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.cyberwareType", CName('Cyberdeck'))
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.displayName", LocKey("FuyutsukiCyberdeckMK3S-Name"))
-TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.equipPrereqs", {})
+TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.equipPrereqs", {"Items.FuyutsukiCyberdeckMK2_SM_inline6"})
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.friendlyName", "Fuyutsuki Mk.III-S")
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.iconPath", "cw_system_fuyutsuicyberdeck")
 TweakDB:SetFlat("Items.FuyutsukiCyberdeckMK3_SM.localizedDescription", LocKey("FuyutsukiCyberdeckMKS-Desc-Universal"))
