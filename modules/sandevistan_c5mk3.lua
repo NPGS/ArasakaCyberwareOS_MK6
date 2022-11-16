@@ -34,7 +34,7 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK3.statModifiers", {"Items.Sandevistan
 -- STATS
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline1.value", 12)    -- Duration
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline2.value", 0.4)   -- Time Dilation
-TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline3.value", 15)    -- Cooldown
+TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline3.value", 12)    -- Cooldown
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_prereq.valueToCheck", 12)  -- Prereq
 -- LOGIC GROUP 3 (HEALING)
 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline4.effectors", {"Items.ArasakaSandevistanMK3_inline5"})
