@@ -1,4 +1,4 @@
--- ver. 1.12.1
+-- ver. 1.12.2
 
 -- Berserk Arasaka Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
@@ -36,6 +36,10 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline36", "Items.BerserkC2MK4_inline8") -- apply effector effector
             TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline37", "Items.BerserkC2MK4_inline10") -- effector
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline38", "Items.BerserkC2MK4_inline11") -- uidata
+    -- ICON
+    TweakDB:CreateRecord("UIIcon.Items.ArasakaBerserkMK6_icon", "gamedataUIIcon_Record")
+    TweakDB:SetFlat("UIIcon.Items.ArasakaBerserkMK6_icon.atlasPartName", CName('arasaka_berserk_icon_01'))
+    TweakDB:SetFlat("UIIcon.Items.ArasakaBerserkMK6_icon.atlasResourcePath", CName('mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas'))
     -- VENDOR
     TweakDB:CloneRecord("Vendors.wbr_hil_ripdoc_01_zerk_mk6", "Vendors.wbr_hil_ripdoc_01_inline0")
     TweakDB:SetFlat("Vendors.wbr_hil_ripdoc_01_zerk_mk6.availabilityPrereq", "Vendors.DowntownCredAvailability")
@@ -51,7 +55,8 @@ TweakDB:SetFlat("Items.ArasakaBerserkMK6.buyPrice", {"Price.BasePrice","Price.Bu
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.displayName", LocKey("ArasakaBerserkMK6-Name"))
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.localizedDescription", LocKey("ArasakaBerserkMK6-Desc"))
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.equipPrereqs", {"Items.ArasakaBerserkMK6_inline0"})
-TweakDB:SetFlat("Items.ArasakaBerserkMK6.iconPath", "cwf_berserk7")
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.icon", "UIIcon.Items.ArasakaBerserkMK6_icon")
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.iconPath", "Items.ArasakaBerserkMK6_icon")
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.OnEquip", {"Items.BerserkBase_inline0","Items.BerserkBase_inline1","Items.ArasakaBerserkMK6_inline8","Items.ArasakaBerserkMK6_inline35","Items.ArasakaBerserkMK6_inline14","Items.ArasakaBerserkMK6_inline20","Items.BerserkCarryCapacity_E_inline0","Items.BerserkExtremeDmgReduction_inline0"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.statModifiers", {"Items.BerserkBase_inline3","Items.ArasakaBerserkMK6_inline1","Items.ArasakaBerserkMK6_inline2","Items.ArasakaBerserkMK6_inline3","Items.ArasakaBerserkMK6_inline4","Items.ArasakaBerserkMK6_inline5","Items.ArasakaBerserkMK6_inline6","Items.BerserkC4MK5_inline7","Items.ArasakaBerserkMK6_inline30","Items.BerserkBase_cooldown_fix"})
