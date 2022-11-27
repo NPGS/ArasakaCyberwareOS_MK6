@@ -1,4 +1,4 @@
--- ver. 1.12.1   Arasaka Nightmare Mk.4/5 + NetWatch & Qiant Rage Mk.5 (Hybrid Cyberdeck/Sandevistan OS)
+-- ver. 1.12.2   Arasaka Nightmare Mk.4/5 + NetWatch & Qiant Rage Mk.5 (Hybrid Cyberdeck/Sandevistan OS)
 
 -- Arasaka Nightmare Mk.4
 if TweakDB:GetRecord("Items.ArasakaNightmareMK4_M") == nil then
@@ -253,3 +253,26 @@ TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M.statModifiers", objStatsRageMk5)
         TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline6.valueToCheck", 12)   -- Prereq
 TweakDB:SetFlat("Vendors.std_arr_ripperdoc_01_rage_mk5.availabilityPrereq", "Vendors.DowntownCredAvailability")
 TweakDB:SetFlat("Vendors.std_arr_ripperdoc_01_rage_mk5.item", "Items.NetwatchQiantRageMK5_M")
+
+-- NetWatch & Qiant Rage Mk.5 TEST
+if TweakDB:GetRecord("Items.NetwatchQiantRageMK5_Test") == nil then
+    TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_Test", "Items.NetwatchQiantRageMK5_M")    -- Item
+    arrayInsert("Debug.CW_Cyberdecks.items", "Items.NetwatchQiantRageMK5_Test") -- Debug
+end
+
+local objEquipRageMk5Proto = {
+    "Items.SandevistanBase_inline2",
+    "Items.BaseDeck_inline0",
+    "Items.BaseDeck_inline3",
+    "Items.NetwatchQiantRageMK5_M_inline0",
+    "Items.UltimateHacksSpreadAbility",
+    "Items.DamageHacksAreaAbility",
+    "Items.CooldownReductionAbility03",
+    "Items.SpreadingRangeAbility03",
+    "Items.UploadReductionAbility03"
+}
+
+-- NetWatch & Qiant Rage Mk.5 TEST
+TweakDB:SetFlat("Items.NetwatchQiantRageMK5_Test.cyberwareType", CName('Cyberdeck'))
+TweakDB:SetFlat("Items.NetwatchQiantRageMK5_Test.friendlyName", "NetWatch & Qiant Rage Mk.5 Prototype")
+TweakDB:SetFlat("Items.NetwatchQiantRageMK5_Test.OnEquip", objEquipRageMk5Proto)
