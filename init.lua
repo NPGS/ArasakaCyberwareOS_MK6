@@ -1,4 +1,4 @@
--- ver. 1.12.1 - LUA MODULES LOADER
+-- ver. 1.12.2 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
     require("modules/berserk_fixes.lua")
