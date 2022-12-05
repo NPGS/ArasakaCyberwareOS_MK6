@@ -1,6 +1,7 @@
--- ver. 1.12.2 - LUA MODULES LOADER
+-- ver. 1.12.3 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
+    require("modules/custom_blueprints.lua")
     require("modules/berserk_fixes.lua")
     require("modules/berserk_c5mk6.lua")
     require("modules/cyberdecks_abilities.lua")
@@ -24,4 +25,12 @@ function arrayInsert(arr, rec)
 	bakArray = TweakDB:GetFlat(arr)
 	table.insert(bakArray, rec)
 	TweakDB:SetFlat(arr, bakArray)
+end
+
+function enableSlot(slotName)
+    Override('InventoryDataManagerV2', 'GetAttachmentSlotsForInventory;', function(wrappedMethod)
+		slot = wrappedMethod()
+		table.insert(slot, TweakDBID.new(slotName))
+		return slot
+	end)
 end

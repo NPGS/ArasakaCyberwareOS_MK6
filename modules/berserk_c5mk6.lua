@@ -1,4 +1,4 @@
--- ver. 1.12.2
+-- ver. 1.12.3
 
 -- Berserk Arasaka Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
@@ -49,6 +49,7 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
     arrayInsert("Debug.CW_Berserks.items", "Items.ArasakaBerserkMK6")
 end
 -- ASSIGN STATS
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.blueprint", "Items.BerserkBlueprintMK6")   -- custom blueprint
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", CName('Berserk'))
 TweakDB:SetFlat("Price.Berserk_MK6.value", 30)
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
