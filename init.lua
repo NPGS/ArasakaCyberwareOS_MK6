@@ -27,33 +27,34 @@ function arrayInsert(arr, rec)
 	TweakDB:SetFlat(arr, bakArray)
 end
 
+-- i thank a collaborator of mine for allowing me to use this function
 function enableSlot(slotName)
-    local tbdid = TweakDB:GetRecord(slotName):GetID()
+    local recordID = TweakDB:GetRecord(slotName):GetID()
     Override('InventoryDataManagerV2', 'GetAttachmentSlotsForInventory;', function(wrappedMethod)
 		slot = wrappedMethod()
 		table.insert(slot, TweakDBID.new(slotName))
 		return slot
 	end)
     Override('UIItemsHelper', 'GetEmptySlotName;TweakDBID', function(slotID, wrappedMethod)
-        if (slotID == tbdid) then
+        if (slotID == recordID) then
             return "UI-Labels-EmptyCyberwareModSlot"
         end
         return wrappedMethod(slotID)
     end)
     Override('UIItemsHelper', 'GetSlotShadowIcon;TweakDBIDgamedataItemTypegamedataEquipmentArea', function(slotID, itemType, equipmentArea, wrappedMethod)
-        if (slotID == tbdid) then
+        if (slotID == recordID) then
             return CName.new('UIIcon.ItemShadow_Fragment')
         end
         return wrappedMethod(slotID, itemType, equipmentArea)
     end)
     Override('UIItemsHelper', 'GetLootingtShadowIcon;TweakDBIDgamedataItemTypegamedataEquipmentArea', function(slotID, itemType, equipmentArea, wrappedMethod)
-        if (slotID == tbdid) then
+        if (slotID == recordID) then
             return CName.new('UIIcon.LootingShadow_Fragment')
         end
         return wrappedMethod(slotID, itemType, equipmentArea)
     end)
     Override('UIItemsHelper', 'GetSlotName;TweakDBIDgamedataItemTypegamedataEquipmentArea', function(slotID, itemType, equipmentArea, wrappedMethod)
-        if (slotID == tbdid) then
+        if (slotID == recordID) then
             return "Gameplay-Items-Item Type-Prt_Fragment"
         end
         return wrappedMethod(slotID, itemType, equipmentArea)
