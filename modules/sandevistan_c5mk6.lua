@@ -49,7 +49,7 @@ TweakDB:SetFlat("Items.ArasakaSandevistanMK6.sellPrice", {"Price.BasePrice","Pri
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.ArasakaSandevistanMK6_inline1","Items.ArasakaSandevistanMK6_inline2","Items.ArasakaSandevistanMK6_inline3","Items.SandevistanC4MK5_inline4"})
 -- STATS
 TweakDB:SetFlat("Price.Sandevistan_MK6_A.value", 35)
-TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline1.value", 15)    -- duration
+TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline1.value", 14)    -- duration
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline2.value", 0.04)  -- time dilation
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline3.value", 18)     -- cooldown
 TweakDB:SetFlat("Items.ArasakaSandevistanMK6_prereq.valueToCheck", 20)     -- equip requirement

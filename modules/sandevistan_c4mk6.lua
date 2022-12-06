@@ -46,7 +46,7 @@ TweakDB:SetFlat("Items.MilitechSandevistanMK6.sellPrice", {"Price.BasePrice","Pr
 TweakDB:SetFlat("Items.MilitechSandevistanMK6.statModifiers", {"Items.SandevistanBase_inline0","Items.SandevistanBase_inline1","Items.MilitechSandevistanMK6_inline1","Items.MilitechSandevistanMK6_inline2","Items.MilitechSandevistanMK6_inline3","Items.SandevistanC4MK5_inline4"})
 -- STATS
 TweakDB:SetFlat("Price.Sandevistan_MK6_2.value", 20)    -- price
-TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline1.value", 15)     -- duration
+TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline1.value", 14)     -- duration
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline2.value", 0.2)    -- time scale
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_inline3.value", 18)     -- cooldown
 TweakDB:SetFlat("Items.MilitechSandevistanMK6_prereq.valueToCheck", 20)     -- equip requirement
