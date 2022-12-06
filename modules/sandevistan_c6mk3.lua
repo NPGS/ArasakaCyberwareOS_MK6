@@ -1,6 +1,6 @@
--- ver. 1.12.2
+-- ver. 1.12.3
 
--- Sandevistan "Ninja" Fuyutsuki Mk.3
+-- Fuyutsuki "Ninja" Sandevistan Mk.3
 if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
     -- BASE
     TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3", "Items.SandevistanC2MK3")

@@ -1,6 +1,6 @@
 -- ver. 1.12.3
 
--- Berserk Arasaka Mk.6
+-- Arasaka Berserk Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
     -- BASE
     TweakDB:CloneRecord("Items.ArasakaBerserkMK6", "Items.BerserkC4MK5") -- clone obj

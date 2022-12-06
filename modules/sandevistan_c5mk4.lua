@@ -1,6 +1,6 @@
--- ver. 1.12.0
+-- ver. 1.12.3
 
--- Sandevistan Arasaka Mk.4
+-- Arasaka Sandevistan Mk.4
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK4") == nil then
     -- BASE
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK4", "Items.SandevistanC3MK4")

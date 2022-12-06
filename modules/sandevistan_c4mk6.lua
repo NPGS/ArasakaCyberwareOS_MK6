@@ -1,6 +1,6 @@
 -- ver. 1.12.3
 
--- Sandevistan "Leopard" Militech Mk.6
+-- Militech "Leopard" Sandevistan Mk.6
 if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
     -- BASE
     TweakDB:CloneRecord("Items.MilitechSandevistanMK6", "Items.SandevistanC4MK5")
