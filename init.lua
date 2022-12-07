@@ -29,34 +29,21 @@ end
 
 -- i thank a collaborator of mine for allowing me to use this function
 function enableSlot(slotName)
-    local recordID = TweakDB:GetRecord(slotName):GetID()
     Override('InventoryDataManagerV2', 'GetAttachmentSlotsForInventory;', function(wrappedMethod)
 		slot = wrappedMethod()
 		table.insert(slot, TweakDBID.new(slotName))
 		return slot
 	end)
-    Override('UIItemsHelper', 'GetEmptySlotName;TweakDBID', function(slotID, wrappedMethod)
-        if (slotID == recordID) then
-            return "UI-Labels-EmptyCyberwareModSlot"
-        end
-        return wrappedMethod(slotID)
+    Override('UIItemsHelper', 'GetEmptySlotName;TweakDBID', function()
+        return "UI-Labels-EmptyCyberwareModSlot"
     end)
-    Override('UIItemsHelper', 'GetSlotShadowIcon;TweakDBIDgamedataItemTypegamedataEquipmentArea', function(slotID, itemType, equipmentArea, wrappedMethod)
-        if (slotID == recordID) then
-            return CName.new('UIIcon.ItemShadow_Fragment')
-        end
-        return wrappedMethod(slotID, itemType, equipmentArea)
+    Override('UIItemsHelper', 'GetSlotShadowIcon;TweakDBIDgamedataItemTypegamedataEquipmentArea', function()
+        return CName.new('UIIcon.ItemShadow_Fragment')
     end)
-    Override('UIItemsHelper', 'GetLootingtShadowIcon;TweakDBIDgamedataItemTypegamedataEquipmentArea', function(slotID, itemType, equipmentArea, wrappedMethod)
-        if (slotID == recordID) then
-            return CName.new('UIIcon.LootingShadow_Fragment')
-        end
-        return wrappedMethod(slotID, itemType, equipmentArea)
+    Override('UIItemsHelper', 'GetLootingtShadowIcon;TweakDBIDgamedataItemTypegamedataEquipmentArea', function()
+        return CName.new('UIIcon.LootingShadow_Fragment')
     end)
-    Override('UIItemsHelper', 'GetSlotName;TweakDBIDgamedataItemTypegamedataEquipmentArea', function(slotID, itemType, equipmentArea, wrappedMethod)
-        if (slotID == recordID) then
-            return "Gameplay-Items-Item Type-Prt_Fragment"
-        end
-        return wrappedMethod(slotID, itemType, equipmentArea)
+    Override('UIItemsHelper', 'GetSlotName;TweakDBIDgamedataItemTypegamedataEquipmentArea', function()
+        return "Gameplay-Items-Item Type-Prt_Fragment"
     end)
 end
