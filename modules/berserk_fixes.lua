@@ -85,7 +85,7 @@
 			TweakDB:SetFlat("Items.BerserkCarryCapacity05.effectors", {"Items.BerserkCarryCapacity05_inline0"})
 				TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline0.statGroup", "Items.BerserkCarryCapacity05_inline1")
 					TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline1.statModifiers", {"Items.BerserkCarryCapacity05_inline2"})
-						TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline2.value", 50)
+						TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline2.value", 0.5)
 			TweakDB:SetFlat("Items.BerserkCarryCapacity05.UIData", "Items.BerserkCarryCapacity05_inline3")
 				TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline3.intValues", {50})
 		end
