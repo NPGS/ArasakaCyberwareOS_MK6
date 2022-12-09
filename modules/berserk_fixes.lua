@@ -1,4 +1,4 @@
--- ver. 1.9.2
+-- ver. 1.12.3
 
 -- BERSERK FIXES
 
@@ -14,6 +14,13 @@
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_inline25.refObject", "Player")
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_inline26.refObject", "Player")
 
+		-- ADD RESISTANCES TO BERSERK Mk.6
+		if TweakDB:GetRecord("Items.Berserk_VeryHighResistance") == nil then
+			TweakDB:CreateRecord("Items.Berserk_VeryHighResistance", "gamedataConstantStatModifier_Record")
+			TweakDB:SetFlat("Items.Berserk_VeryHighResistance.modifierType", "Additive")
+			TweakDB:SetFlat("Items.Berserk_VeryHighResistance.statType", "BaseStats.BerserkResistancesBonus")
+			TweakDB:SetFlat("Items.Berserk_VeryHighResistance.value", 50)
+		end
 
 	-- MELEE DAMAGE DMG ADD
 	if TweakDB:GetRecord("BaseStatusEffect.BerserkPlayerBuff_melee_dmg") == nil then
@@ -49,34 +56,36 @@
 
 	-- ADD DAMAGE REDUCTION
 
-		-- EXTREME REDUCTION
-		if TweakDB:GetRecord("Items.BerserkExtremeDmgReduction_inline0") == nil then
-			TweakDB:CreateRecord("Items.BerserkExtremeDmgReduction_inline0", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
-				TweakDB:CloneRecord("Items.BerserkExtremeDmgReduction_inline1", "Items.BerserkC4MK5_inline9")	-- EFFECTOR EFFECTOR
-					TweakDB:CloneRecord("Items.BerserkExtremeDmgReduction_inline2", "Items.PainReductor_inline2")	-- EFFECTOR
-				TweakDB:CloneRecord("Items.BerserkExtremeDmgReduction_inline3", "Items.PainReductor_inline3")	-- UIDATA
-			-- SET STATS
-			TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline0.effectors", {"Items.BerserkExtremeDmgReduction_inline1"})
-				TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline1.effectorToApply", "Items.BerserkExtremeDmgReduction_inline2")
-					TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline2.operationType", 'Multiply')
-					TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline2.value", 0.4, 'Float')
-			TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline0.UIData", "Items.BerserkExtremeDmgReduction_inline3")
-				TweakDB:SetFlat("Items.BerserkExtremeDmgReduction_inline3.intValues", {60})	-- UIDATA
+		-- VERY HIGH REDUCTION Mk.6
+		if TweakDB:GetRecord("Items.BerserkDmgReduction05") == nil then
+			TweakDB:CreateRecord("Items.BerserkDmgReduction05", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
+				TweakDB:CloneRecord("Items.BerserkDmgReduction05_inline0", "Items.BerserkC4MK5_inline9")	-- EFFECTOR EFFECTOR
+					TweakDB:CloneRecord("Items.BerserkDmgReduction05_inline1", "Items.PainReductor_inline2")	-- EFFECTOR
+				TweakDB:CloneRecord("Items.BerserkDmgReduction05_inline2", "Items.PainReductor_inline3")	-- UIDATA
+			TweakDB:SetFlat("Items.BerserkDmgReduction05.effectors", {"Items.BerserkDmgReduction05_inline0"})
+				TweakDB:SetFlat("Items.BerserkDmgReduction05_inline0.effectorToApply", "Items.BerserkDmgReduction05_inline1")
+					TweakDB:SetFlat("Items.BerserkDmgReduction05_inline1.operationType", 'Multiply')
+					TweakDB:SetFlat("Items.BerserkDmgReduction05_inline1.value", 0.5, 'Float')
+			TweakDB:SetFlat("Items.BerserkDmgReduction05.UIData", "Items.BerserkDmgReduction05_inline2")
+				TweakDB:SetFlat("Items.BerserkDmgReduction05_inline2.intValues", {50})	-- UIDATA
+			arrayInsert("Items.BerserkC3MK5.OnEquip", "Items.BerserkDmgReduction05")
+			arrayInsert("Items.BerserkC4MK5.OnEquip", "Items.BerserkDmgReduction05")
 		end
 
 
 	-- STRENGTH INCREASES CARRY CAPACITY
 
-		-- EXTREME CAPACITY Mk.6
-		if TweakDB:GetRecord("Items.BerserkCarryCapacity_E_inline0") == nil then
-			TweakDB:CreateRecord("Items.BerserkCarryCapacity_E_inline0", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
-				TweakDB:CloneRecord("Items.BerserkCarryCapacity_E_inline1", "Items.BerserkC4MK5_inline15")	-- STAT GROUP EFFECTOR
-					TweakDB:CloneRecord("Items.BerserkCarryCapacity_E_inline2", "Items.BerserkC4MK5_inline17")	-- STAT MODIFIER GROUP
-						TweakDB:CloneRecord("Items.BerserkCarryCapacity_E_inline3", "Items.TitaniumInfusedBonesRare_inline2")	-- CONSTANT STAT MODIFIER
-				TweakDB:CloneRecord("Items.BerserkCarryCapacity_E_inline4", "Items.TitaniumInfusedBonesRare_inline3")	-- UIDATA
-			-- SET STATS
-			TweakDB:SetFlat("Items.BerserkCarryCapacity_E_inline0.effectors", {"Items.BerserkCarryCapacity_E_inline1"})
-				TweakDB:SetFlat("Items.BerserkCarryCapacity_E_inline1.statGroup", "Items.BerserkCarryCapacity_E_inline2")
-					TweakDB:SetFlat("Items.BerserkCarryCapacity_E_inline2.statModifiers", {"Items.BerserkCarryCapacity_E_inline3"})
-			TweakDB:SetFlat("Items.BerserkCarryCapacity_E_inline0.UIData", "Items.BerserkCarryCapacity_E_inline4")
+		-- VERY HIGH CAPACITY Mk.6
+		if TweakDB:GetRecord("Items.BerserkCarryCapacity05") == nil then
+			TweakDB:CreateRecord("Items.BerserkCarryCapacity05", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
+				TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline0", "Items.BerserkC4MK5_inline15")	-- STAT GROUP EFFECTOR
+					TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline1", "Items.BerserkC4MK5_inline17")	-- STAT MODIFIER GROUP
+						TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline2", "Items.TitaniumInfusedBonesCommon_inline1")	-- CONSTANT STAT MODIFIER
+				TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline3", "Items.TitaniumInfusedBonesCommon_inline2")	-- UIDATA
+			TweakDB:SetFlat("Items.BerserkCarryCapacity05.effectors", {"Items.BerserkCarryCapacity05_inline0"})
+				TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline0.statGroup", "Items.BerserkCarryCapacity05_inline1")
+					TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline1.statModifiers", {"Items.BerserkCarryCapacity05_inline2"})
+						TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline2.value", 50)
+			TweakDB:SetFlat("Items.BerserkCarryCapacity05.UIData", "Items.BerserkCarryCapacity05_inline3")
+				TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline3.intValues", {50})
 		end
