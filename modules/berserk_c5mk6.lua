@@ -60,13 +60,13 @@ TweakDB:SetFlat("Items.ArasakaBerserkMK6.OnEquip", {"Items.BerserkBase_inline0",
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.statModifiers", {"Items.BerserkBase_inline3","Items.ArasakaBerserkMK6_inline1","Items.ArasakaBerserkMK6_inline2","Items.ArasakaBerserkMK6_inline3","Items.ArasakaBerserkMK6_inline4","Items.ArasakaBerserkMK6_inline5","Items.ArasakaBerserkMK6_inline6","Items.BerserkC4MK5_inline7","Items.BerserkResistances05","Items.BerserkBase_cooldown_fix"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline0.valueToCheck", 20) -- prereq
-TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline1.value", 40)    -- recoil
-TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline2.value", 40)    -- sway
-TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline3.value", 40)    -- melee damage
+TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline1.value", 30)    -- recoil
+TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline2.value", 30)    -- sway
+TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline3.value", 30)    -- melee damage
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline4.value", 50)    -- armor / resistances
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline5.value", 30)    -- duration
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline6.value", 30)    -- cooldown
-TweakDB:SetFlat("Price.Berserk_MK6.value", 30)
+TweakDB:SetFlat("Price.Berserk_MK6.value", 25)
 -- LOGIC GROUP 1 => HEAL
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline8.effectors", {"Items.ArasakaBerserkMK6_inline9"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline9.effectorToApply", "Items.ArasakaBerserkMK6_inline11")
@@ -95,6 +95,6 @@ TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline20.UIData", "Items.ArasakaBerserk
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline35.effectors", {"Items.ArasakaBerserkMK6_inline36"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline36.effectorToApply", "Items.ArasakaBerserkMK6_inline37")
         TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline37.operationType", 'Multiply')
-        TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline37.value", 1.4, 'Float')
+        TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline37.value", 1.3, 'Float')
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline35.UIData", "Items.ArasakaBerserkMK6_inline38")
-    TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline38.intValues", {40})
+    TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline38.intValues", {30})
