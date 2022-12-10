@@ -49,15 +49,14 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
 end
 -- ASSIGN STATS
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.blueprint", "Items.BerserkBlueprintMK6")   -- custom blueprint
-TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", CName('Berserk'))
-TweakDB:SetFlat("Price.Berserk_MK6.value", 30)
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", CName('Berserk'))
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.displayName", LocKey("ArasakaBerserkMK6-Name"))
-TweakDB:SetFlat("Items.ArasakaBerserkMK6.localizedDescription", LocKey("ArasakaBerserkMK6-Desc"))
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.equipPrereqs", {"Items.ArasakaBerserkMK6_inline0"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.icon", "UIIcon.Items.ArasakaBerserkMK6_icon")
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.iconPath", "Items.ArasakaBerserkMK6_icon")
-TweakDB:SetFlat("Items.ArasakaBerserkMK6.OnEquip", {"Items.BerserkBase_inline0","Items.BerserkBase_inline1","Items.ArasakaBerserkMK6_inline8","Items.ArasakaBerserkMK6_inline35","Items.ArasakaBerserkMK6_inline14","Items.ArasakaBerserkMK6_inline20","Items.BerserkCarryCapacity05","Items.BerserkDmgReduction05"})
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.localizedDescription", LocKey("ArasakaBerserkMK6-Desc"))
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.OnEquip", {"Items.BerserkBase_inline0","Items.BerserkBase_inline1","Items.ArasakaBerserkMK6_inline35","Items.ArasakaBerserkMK6_inline8","Items.ArasakaBerserkMK6_inline14","Items.ArasakaBerserkMK6_inline20","Items.BerserkCarryCapacity05","Items.BerserkDmgReduction05"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.statModifiers", {"Items.BerserkBase_inline3","Items.ArasakaBerserkMK6_inline1","Items.ArasakaBerserkMK6_inline2","Items.ArasakaBerserkMK6_inline3","Items.ArasakaBerserkMK6_inline4","Items.ArasakaBerserkMK6_inline5","Items.ArasakaBerserkMK6_inline6","Items.BerserkC4MK5_inline7","Items.Berserk_VeryHighResistance","Items.BerserkBase_cooldown_fix"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline0.valueToCheck", 20) -- prereq
@@ -67,6 +66,7 @@ TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline3.value", 40)    -- melee damage
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline4.value", 50)    -- armor / resistances
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline5.value", 30)    -- duration
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline6.value", 30)    -- cooldown
+TweakDB:SetFlat("Price.Berserk_MK6.value", 30)
 -- LOGIC GROUP 1 => HEAL
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline8.effectors", {"Items.ArasakaBerserkMK6_inline9"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline9.effectorToApply", "Items.ArasakaBerserkMK6_inline11")
