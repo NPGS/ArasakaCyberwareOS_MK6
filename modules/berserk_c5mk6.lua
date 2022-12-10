@@ -58,7 +58,7 @@ TweakDB:SetFlat("Items.ArasakaBerserkMK6.iconPath", "Items.ArasakaBerserkMK6_ico
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.localizedDescription", LocKey("ArasakaBerserkMK6-Desc"))
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.OnEquip", {"Items.BerserkBase_inline0","Items.BerserkBase_inline1","Items.ArasakaBerserkMK6_inline35","Items.ArasakaBerserkMK6_inline8","Items.ArasakaBerserkMK6_inline14","Items.ArasakaBerserkMK6_inline20","Items.BerserkCarryCapacity05","Items.BerserkDmgReduction05"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
-TweakDB:SetFlat("Items.ArasakaBerserkMK6.statModifiers", {"Items.BerserkBase_inline3","Items.ArasakaBerserkMK6_inline1","Items.ArasakaBerserkMK6_inline2","Items.ArasakaBerserkMK6_inline3","Items.ArasakaBerserkMK6_inline4","Items.ArasakaBerserkMK6_inline5","Items.ArasakaBerserkMK6_inline6","Items.BerserkC4MK5_inline7","Items.Berserk_VeryHighResistance","Items.BerserkBase_cooldown_fix"})
+TweakDB:SetFlat("Items.ArasakaBerserkMK6.statModifiers", {"Items.BerserkBase_inline3","Items.ArasakaBerserkMK6_inline1","Items.ArasakaBerserkMK6_inline2","Items.ArasakaBerserkMK6_inline3","Items.ArasakaBerserkMK6_inline4","Items.ArasakaBerserkMK6_inline5","Items.ArasakaBerserkMK6_inline6","Items.BerserkC4MK5_inline7","Items.BerserkResistances05","Items.BerserkBase_cooldown_fix"})
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline0.valueToCheck", 20) -- prereq
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline1.value", 40)    -- recoil
 TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline2.value", 40)    -- sway

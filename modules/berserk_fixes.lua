@@ -15,11 +15,11 @@
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_inline26.refObject", "Player")
 
 		-- RESISTANCES FOR BERSERK Mk.6
-		if TweakDB:GetRecord("Items.Berserk_VeryHighResistance") == nil then
-			TweakDB:CreateRecord("Items.Berserk_VeryHighResistance", "gamedataConstantStatModifier_Record")
-			TweakDB:SetFlat("Items.Berserk_VeryHighResistance.modifierType", "Additive")
-			TweakDB:SetFlat("Items.Berserk_VeryHighResistance.statType", "BaseStats.BerserkResistancesBonus")
-			TweakDB:SetFlat("Items.Berserk_VeryHighResistance.value", 50)
+		if TweakDB:GetRecord("Items.BerserkResistances05") == nil then
+			TweakDB:CreateRecord("Items.BerserkResistances05", "gamedataConstantStatModifier_Record")
+			TweakDB:SetFlat("Items.BerserkResistances05.modifierType", "Additive")
+			TweakDB:SetFlat("Items.BerserkResistances05.statType", "BaseStats.BerserkResistancesBonus")
+			TweakDB:SetFlat("Items.BerserkResistances05.value", 50)
 		end
 
 	-- MELEE DAMAGE DMG ADD
