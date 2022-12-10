@@ -43,8 +43,10 @@
 		TweakDB:SetFlat("Items.BerserkBase_cooldown_fix.value", 1)
 		TweakDB:SetFlat("Items.BerserkBase.statModifiers", {"Items.BerserkBase_inline3","Items.BerserkBase_cooldown_fix"})
 		TweakDB:SetFlat("BaseStatusEffect.BerserkCooldown_inline0.statModifiers", {"BaseStatusEffect.CyberwareCooldownDuration_inline0","BaseStatusEffect.BerserkCooldown_inline1","BaseStatusEffect.BerserkCooldown_inline2"})
+		arrayInsert("Items.BerserkC1MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
 		arrayInsert("Items.BerserkC1MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
 		arrayInsert("Items.BerserkC1MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
+		arrayInsert("Items.BerserkC2MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
 		arrayInsert("Items.BerserkC2MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
 		arrayInsert("Items.BerserkC2MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
 		arrayInsert("Items.BerserkC2MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
@@ -68,8 +70,6 @@
 					TweakDB:SetFlat("Items.BerserkDmgReduction05_inline1.value", 0.5, 'Float')
 			TweakDB:SetFlat("Items.BerserkDmgReduction05.UIData", "Items.BerserkDmgReduction05_inline2")
 				TweakDB:SetFlat("Items.BerserkDmgReduction05_inline2.intValues", {50})	-- UIDATA
-			arrayInsert("Items.BerserkC3MK5.OnEquip", "Items.BerserkDmgReduction05")
-			arrayInsert("Items.BerserkC4MK5.OnEquip", "Items.BerserkDmgReduction05")
 		end
 
 
