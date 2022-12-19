@@ -1,4 +1,4 @@
--- ver. 1.12.3 - LUA MODULES LOADER
+-- ver. 1.12.4 - LUA MODULES LOADER
 
 registerForEvent("onInit", function()
     require("modules/custom_blueprints.lua")
@@ -25,6 +25,25 @@ function arrayInsert(arr, rec)
 	bakArray = TweakDB:GetFlat(arr)
 	table.insert(bakArray, rec)
 	TweakDB:SetFlat(arr, bakArray)
+end
+
+function cloneConstantStat(statRecord, record, value)
+    TweakDB:CloneRecord(statRecord, record)
+    TweakDB:SetFlat(statRecord..".value", value)
+end
+
+function createConstantStat(statRecord, modifierType, statType, value)
+    TweakDB:CreateRecord(statRecord, "gamedataConstantStatModifier_Record")
+    TweakDB:SetFlat(statRecord..".modifierType", modifierType)
+    TweakDB:SetFlat(statRecord..".statType", statType)
+    TweakDB:SetFlat(statRecord..".value", value)
+end
+
+function createVendorItem(itemVendorRecord, streetCred, item, vendorItemList)
+	TweakDB:CloneRecord(itemVendorRecord, "Vendors.wat_lch_ripperdoc_01_inline14")
+    TweakDB:SetFlat(itemVendorRecord..".availabilityPrereq", streetCred)
+    TweakDB:SetFlat(itemVendorRecord..".item", item)
+    arrayInsert(vendorItemList, itemVendorRecord)
 end
 
 -- i thank a collaborator of mine for allowing me to use this function
