@@ -35,18 +35,12 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline36", "Items.BerserkC2MK4_inline8") -- apply effector effector
             TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline37", "Items.BerserkC2MK4_inline10") -- effector
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline38", "Items.BerserkC2MK4_inline11") -- uidata
-    -- ICON
-    TweakDB:CreateRecord("UIIcon.Items.ArasakaBerserkMK6_icon", "gamedataUIIcon_Record")
-    TweakDB:SetFlat("UIIcon.Items.ArasakaBerserkMK6_icon.atlasPartName", CName('arasaka_berserk_icon_01'))
-    TweakDB:SetFlat("UIIcon.Items.ArasakaBerserkMK6_icon.atlasResourcePath", CName('mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas'))
     -- ASSIGN STATS
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.blueprint", "Items.BerserkBlueprintMK6")   -- custom blueprint
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", CName('Berserk'))
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.displayName", LocKey("ArasakaBerserkMK6-Name"))
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.equipPrereqs", {"Items.ArasakaBerserkMK6_inline0"})
-    TweakDB:SetFlat("Items.ArasakaBerserkMK6.icon", "UIIcon.Items.ArasakaBerserkMK6_icon")
-    TweakDB:SetFlat("Items.ArasakaBerserkMK6.iconPath", "Items.ArasakaBerserkMK6_icon")
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.localizedDescription", LocKey("ArasakaBerserkMK6-Desc"))
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.OnEquip", {"Items.BerserkBase_inline0","Items.BerserkBase_inline1","Items.ArasakaBerserkMK6_inline35","Items.ArasakaBerserkMK6_inline8","Items.ArasakaBerserkMK6_inline14","Items.ArasakaBerserkMK6_inline20","Items.BerserkCarryCapacity05","Items.BerserkDmgReduction05"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
@@ -81,5 +75,6 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
             TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline38.intValues", {30})
     -- SERVICE
     createVendorItem("Vendors.wbr_hil_ripdoc_01_zerk_mk6","Vendors.DowntownCredAvailability","Items.ArasakaBerserkMK6","Vendors.wbr_hil_ripdoc_01.itemStock")    -- VENDOR
+    createIcon("Items.ArasakaBerserkMK6", 'arasaka_berserk_icon_01', 'mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas')     -- ICON
     arrayInsert("Debug.CW_Berserks.items", "Items.ArasakaBerserkMK6")   -- DEBUG
 end

@@ -46,6 +46,14 @@ function createVendorItem(itemVendorRecord, streetCred, item, vendorItemList)
     arrayInsert(vendorItemList, itemVendorRecord)
 end
 
+function createIcon(itemRecord, iconName, path)
+    TweakDB:CreateRecord("UIIcon."..itemRecord.."_icon", "gamedataUIIcon_Record")
+    TweakDB:SetFlat("UIIcon."..itemRecord.."_icon.atlasPartName", CName(iconName))
+    TweakDB:SetFlat("UIIcon."..itemRecord.."_icon.atlasResourcePath", CName(path))
+    TweakDB:SetFlat(itemRecord..".icon", "UIIcon."..itemRecord.."_icon")
+    TweakDB:SetFlat(itemRecord..".iconPath", itemRecord.."_icon")
+end
+
 -- i thank a collaborator of mine for allowing me to use this function
 function enableSlot(slotName)
     local recordID = TweakDB:GetRecord(slotName):GetID()

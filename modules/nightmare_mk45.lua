@@ -1,51 +1,51 @@
--- ver. 1.12.2   Arasaka Nightmare Mk.4/5 + NetWatch & Qiant Rage Mk.5 (Hybrid Cyberdeck/Sandevistan OS)
+-- ver. 1.12.4   Arasaka Nightmare Mk.4/5 + NetWatch & Qiant Rage Mk.5 (Hybrid Cyberdeck/Sandevistan OS)
 
 -- Arasaka Nightmare Mk.4
 if TweakDB:GetRecord("Items.ArasakaNightmareMK4_M") == nil then
     TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M", "Items.SandevistanC1MK1")    -- Item
         TweakDB:CreateRecord("Items.ArasakaNightmareMK4_M_inline0", "gamedataGameplayLogicPackage_Record")   -- Logic (Netrunner)
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline1", "Items.MilitechParaline_inline1")   -- RAM
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline2", "Items.MilitechParaline_inline2")  -- Buffer
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline6", "Items.SandevistanC1MK1_inline0")  -- Prereq
-    TweakDB:CloneRecord("Price.Cyberdeck_NM4", "Price.Cyberdeck")   -- Price
-    TweakDB:CloneRecord("Vendors.cct_dtn_ripdoc_01_nightmare4", "Vendors.cct_dtn_ripdoc_01_inline16")  -- Vendor Item
+            cloneConstantStat("Items.ArasakaNightmareMK4_M_inline1", "Items.MilitechParaline_inline1", 8)   -- RAM
+            cloneConstantStat("Items.ArasakaNightmareMK4_M_inline2", "Items.MilitechParaline_inline2", 7)  -- Buffer
+            cloneConstantStat("Items.ArasakaNightmareMK4_M_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
+            cloneConstantStat("Items.ArasakaNightmareMK4_M_inline4", "Items.SandevistanC1MK1_inline2", 0.25)  -- Time Scale
+            cloneConstantStat("Items.ArasakaNightmareMK4_M_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
+        TweakDB:CloneRecord("Items.ArasakaNightmareMK4_M_inline6", "Items.SandevistanC1MK1_inline0")  -- Prereq
+        cloneConstantStat("Price.Cyberdeck_NM4", "Price.Cyberdeck", 8)   -- Price
     arrayInsert("Items.ArasakaNightmareMK4_M.tags", CName('Cyberdeck')) -- Tags
-    arrayInsert("Vendors.cct_dtn_ripdoc_01.itemStock", "Vendors.cct_dtn_ripdoc_01_nightmare4")   -- Vendor list
-    arrayInsert("Debug.CW_Cyberdecks.items", "Items.ArasakaNightmareMK4_M") -- Debug
+    -- SERVICE
+    createVendorItem("Vendors.cct_dtn_ripdoc_01_nightmare4","Vendors.EndGameCredAvailability","Items.ArasakaNightmareMK4_M","Vendors.cct_dtn_ripdoc_01.itemStock")   -- Vendor
+    arrayInsert("Debug.CW_Cyberdecks.items","Items.ArasakaNightmareMK4_M") -- Debug
 end
 
 -- Arasaka Nightmare Mk.5
 if TweakDB:GetRecord("Items.ArasakaNightmareMK5_M") == nil then
     TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M", "Items.SandevistanC1MK1")    -- Item
         TweakDB:CreateRecord("Items.ArasakaNightmareMK5_M_inline0", "gamedataGameplayLogicPackage_Record")   -- Logic (Netrunner)
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline1", "Items.MilitechParaline_inline1")   -- RAM
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline2", "Items.MilitechParaline_inline2")  -- Buffer
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
-            TweakDB:CloneRecord("Items.ArasakaNightmareMK5_M_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
-    TweakDB:CloneRecord("Price.Cyberdeck_NM5", "Price.Cyberdeck")   -- Price
-    TweakDB:CloneRecord("Vendors.wbr_jpn_ripperdoc_02_nightmare5", "Vendors.wbr_jpn_ripperdoc_02_inline0")  -- Vendor Item
+            cloneConstantStat("Items.ArasakaNightmareMK5_M_inline1", "Items.MilitechParaline_inline1", 10)   -- RAM
+            cloneConstantStat("Items.ArasakaNightmareMK5_M_inline2", "Items.MilitechParaline_inline2", 8)  -- Buffer
+            cloneConstantStat("Items.ArasakaNightmareMK5_M_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
+            cloneConstantStat("Items.ArasakaNightmareMK5_M_inline4", "Items.SandevistanC1MK1_inline2", 0.25)  -- Time Scale
+            cloneConstantStat("Items.ArasakaNightmareMK5_M_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
+        cloneConstantStat("Price.Cyberdeck_NM5", "Price.Cyberdeck", 15)   -- Price
     arrayInsert("Items.ArasakaNightmareMK5_M.tags", CName('Cyberdeck')) -- Tags
-    arrayInsert("Vendors.wbr_jpn_ripperdoc_02.itemStock", "Vendors.wbr_jpn_ripperdoc_02_nightmare5")    -- Vendor list
-    arrayInsert("Debug.CW_Cyberdecks.items", "Items.ArasakaNightmareMK5_M") -- Debug
+    -- SERVICE
+    createVendorItem("Vendors.wbr_jpn_ripperdoc_02_nightmare5","Vendors.DowntownCredAvailability","Items.ArasakaNightmareMK5_M","Vendors.wbr_jpn_ripperdoc_02.itemStock")    -- Vendor
+    arrayInsert("Debug.CW_Cyberdecks.items","Items.ArasakaNightmareMK5_M") -- Debug
 end
 
 -- NetWatch & Qiant Rage Mk.5
 if TweakDB:GetRecord("Items.NetwatchQiantRageMK5_M") == nil then
     TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M", "Items.SandevistanC1MK1")    -- Item
         TweakDB:CreateRecord("Items.NetwatchQiantRageMK5_M_inline0", "gamedataGameplayLogicPackage_Record")   -- Logic (Netrunner)
-            TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline1", "Items.MilitechParaline_inline1")   -- RAM
-            TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline2", "Items.MilitechParaline_inline2")  -- Buffer
-            TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline3", "Items.SandevistanC1MK1_inline1")  -- Duration
-            TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline4", "Items.SandevistanC1MK1_inline2")  -- Time Scale
-            TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline5", "Items.SandevistanC1MK1_inline3")  -- Cooldown
-            TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline6", "Items.SandevistanC1MK1_inline0")  -- Prereq
-    TweakDB:CloneRecord("Vendors.std_arr_ripperdoc_01_rage_mk5", "Vendors.std_arr_ripperdoc_01_inline0")  -- Vendor Item
+            cloneConstantStat("Items.NetwatchQiantRageMK5_M_inline1", "Items.MilitechParaline_inline1", 10)   -- RAM
+            cloneConstantStat("Items.NetwatchQiantRageMK5_M_inline2", "Items.MilitechParaline_inline2", 8)  -- Buffer
+            cloneConstantStat("Items.NetwatchQiantRageMK5_M_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
+            cloneConstantStat("Items.NetwatchQiantRageMK5_M_inline4", "Items.SandevistanC1MK1_inline2", 0.1)  -- Time Scale
+            cloneConstantStat("Items.NetwatchQiantRageMK5_M_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
+        TweakDB:CloneRecord("Items.NetwatchQiantRageMK5_M_inline6", "Items.SandevistanC1MK1_inline0")  -- Prereq
     arrayInsert("Items.NetwatchQiantRageMK5_M.tags", CName('Cyberdeck')) -- Tags
-    arrayInsert("Vendors.std_arr_ripperdoc_01.itemStock", "Vendors.std_arr_ripperdoc_01_rage_mk5")    -- Vendor list
+    -- SERVICE
+    createVendorItem("Vendors.std_arr_ripperdoc_01_rage_mk5","Vendors.DowntownCredAvailability","Items.NetwatchQiantRageMK5_M","Vendors.std_arr_ripperdoc_01.itemStock")-- Vendor
     arrayInsert("Debug.CW_Cyberdecks.items", "Items.NetwatchQiantRageMK5_M") -- Debug
 end
 
@@ -196,15 +196,7 @@ TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.sellPrice", nm4SellPrice)
 TweakDB:SetFlat("Items.ArasakaNightmareMK4_M.statModifiers", objStatsMk4)
     TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline0.stats", {"Items.ArasakaNightmareMK4_M_inline1","Items.ArasakaNightmareMK4_M_inline2"})
-        TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline1.value", 8)   -- RAM
-        TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline2.value", 7)   -- Buffer
-        TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline3.value", 4)   -- Duration
-        TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline4.value", 0.25)    -- Time Scale
-        TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline5.value", 8)   -- Cooldown
-        TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline6.valueToCheck", 10)   -- Prereq
-TweakDB:SetFlat("Price.Cyberdeck_NM4.value", 8)
-TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_nightmare4.availabilityPrereq", "Vendors.EndGameCredAvailability")
-TweakDB:SetFlat("Vendors.cct_dtn_ripdoc_01_nightmare4.item", "Items.ArasakaNightmareMK4_M")
+    TweakDB:SetFlat("Items.ArasakaNightmareMK4_M_inline6.valueToCheck", 10)   -- Prereq
 
 -- Arasaka Nightmare Mk.5
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.blueprint", "Items.NightmareCyberdeckBlueprint8Slots")
@@ -221,14 +213,6 @@ TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.sellPrice", nm5SellPrice)
 TweakDB:SetFlat("Items.ArasakaNightmareMK5_M.statModifiers", objStatsMk5)
     TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline0.stats", {"Items.ArasakaNightmareMK5_M_inline1","Items.ArasakaNightmareMK5_M_inline2"})
-        TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline1.value", 10)   -- RAM
-        TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline2.value", 8)   -- Buffer
-        TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline3.value", 4)   -- Duration
-        TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline4.value", 0.25)    -- Time Scale
-        TweakDB:SetFlat("Items.ArasakaNightmareMK5_M_inline5.value", 8)   -- Cooldown
-TweakDB:SetFlat("Price.Cyberdeck_NM5.value", 15)
-TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_nightmare5.availabilityPrereq", "Vendors.DowntownCredAvailability")
-TweakDB:SetFlat("Vendors.wbr_jpn_ripperdoc_02_nightmare5.item", "Items.ArasakaNightmareMK5_M")
 
 -- NetWatch & Qiant Rage Mk.5
 TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M.blueprint", "Items.NightmareCyberdeckBlueprint8Slots")
@@ -245,14 +229,7 @@ TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M.quality", "Quality.Legendary")
 TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M.sellPrice", nm5SellPrice)
 TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M.statModifiers", objStatsRageMk5)
     TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline0.stats", {"Items.NetwatchQiantRageMK5_M_inline1","Items.NetwatchQiantRageMK5_M_inline2"})
-        TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline1.value", 10)   -- RAM
-        TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline2.value", 8)   -- Buffer
-        TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline3.value", 4)   -- Duration
-        TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline4.value", 0.1)    -- Time Scale
-        TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline5.value", 8)   -- Cooldown
-        TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline6.valueToCheck", 12)   -- Prereq
-TweakDB:SetFlat("Vendors.std_arr_ripperdoc_01_rage_mk5.availabilityPrereq", "Vendors.DowntownCredAvailability")
-TweakDB:SetFlat("Vendors.std_arr_ripperdoc_01_rage_mk5.item", "Items.NetwatchQiantRageMK5_M")
+    TweakDB:SetFlat("Items.NetwatchQiantRageMK5_M_inline6.valueToCheck", 12)   -- Prereq
 
 -- NetWatch & Qiant Rage Mk.5 TEST
 if TweakDB:GetRecord("Items.NetwatchQiantRageMK5_Test") == nil then
