@@ -1,4 +1,4 @@
--- ver. 1.12.3
+-- ver. 1.12.4
 
 -- BERSERK FIXES
 
@@ -16,10 +16,7 @@
 
 		-- RESISTANCES FOR BERSERK Mk.6
 		if TweakDB:GetRecord("Items.BerserkResistances05") == nil then
-			TweakDB:CreateRecord("Items.BerserkResistances05", "gamedataConstantStatModifier_Record")
-			TweakDB:SetFlat("Items.BerserkResistances05.modifierType", "Additive")
-			TweakDB:SetFlat("Items.BerserkResistances05.statType", "BaseStats.BerserkResistancesBonus")
-			TweakDB:SetFlat("Items.BerserkResistances05.value", 50)
+			createConstantStat("Items.BerserkResistances05", "Additive", "BaseStats.BerserkResistancesBonus", 50)
 		end
 
 	-- MELEE DAMAGE DMG ADD
@@ -77,12 +74,11 @@
 		TweakDB:CreateRecord("Items.BerserkCarryCapacity05", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
 			TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline0", "Items.BerserkC4MK5_inline15")	-- STAT GROUP EFFECTOR
 				TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline1", "Items.BerserkC4MK5_inline17")	-- STAT MODIFIER GROUP
-					TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline2", "Items.TitaniumInfusedBonesCommon_inline1")	-- CONSTANT STAT MODIFIER
+					cloneConstantStat("Items.BerserkCarryCapacity05_inline2", "Items.TitaniumInfusedBonesCommon_inline1", 0.5)	-- CONSTANT STAT MODIFIER
 			TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline3", "Items.TitaniumInfusedBonesCommon_inline2")	-- UIDATA
 		TweakDB:SetFlat("Items.BerserkCarryCapacity05.effectors", {"Items.BerserkCarryCapacity05_inline0"})
 			TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline0.statGroup", "Items.BerserkCarryCapacity05_inline1")
 				TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline1.statModifiers", {"Items.BerserkCarryCapacity05_inline2"})
-					TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline2.value", 0.5)
 		TweakDB:SetFlat("Items.BerserkCarryCapacity05.UIData", "Items.BerserkCarryCapacity05_inline3")
 			TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline3.intValues", {50})
 	end

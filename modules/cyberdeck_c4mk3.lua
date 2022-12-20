@@ -1,30 +1,19 @@
--- ver. 1.11.1
+-- ver. 1.12.4
 
 -- Cyberdeck Militech Paraline Mk.3 (GUEST)
 if TweakDB:GetRecord("Items.MilitechParalineEpicMKIII") == nil then
-    -- BASE
-    TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII", "Items.TetratronicEpicMKIII")   -- cyberdeck record
+    TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII", "Items.TetratronicEpicMKIII")   -- item
         TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline0", "Items.TetratronicEpicMKIII_inline0")   -- logic package
-            TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline1", "Items.TetratronicEpicMKIII_inline1")   -- ram memory size
-            TweakDB:CloneRecord("Items.MilitechParalineEpicMKIII_inline2", "Items.TetratronicEpicMKIII_inline2")   -- buffer size
-    -- VENDOR
-    TweakDB:CloneRecord("Vendors.wat_lch_ripperdoc_01_militech_mk3", "Vendors.wat_lch_ripperdoc_01_inline15")
-    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.availabilityPrereq", "Vendors.LateStartGameCredAvailability")
-    TweakDB:SetFlat("Vendors.wat_lch_ripperdoc_01_militech_mk3.item", "Items.MilitechParalineEpicMKIII")
-    arrayInsert("Vendors.wat_lch_ripperdoc_01.itemStock", "Vendors.wat_lch_ripperdoc_01_militech_mk3")
-    -- DEBUG
-    arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechParalineEpicMKIII")
+            cloneConstantStat("Items.MilitechParalineEpicMKIII_inline1", "Items.TetratronicEpicMKIII_inline1", 8)   -- ram memory size
+            cloneConstantStat("Items.MilitechParalineEpicMKIII_inline2", "Items.TetratronicEpicMKIII_inline2", 7)   -- buffer size
+    TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.cyberwareType", CName('Cyberdeck'))
+    TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.displayName", LocKey("MilitechCyberdeckMK3-Name"))
+    TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.friendlyName", "Militech Paraline MK III")
+    TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.iconPath", "cw_system_militechcyberdeck")
+    TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.localizedDescription", LocKey(51730))
+    TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.MilitechParalineEpicMKIII_inline0","Items.MemoryRegenAbility02","Items.CooldownReductionAbility02"})
+        TweakDB:SetFlat("Items.MilitechParalineEpicMKIII_inline0.stats", {"Items.MilitechParalineEpicMKIII_inline1", "Items.MilitechParalineEpicMKIII_inline2"})
+    -- SERVICE
+    createVendorItem("Vendors.wat_lch_ripperdoc_01_militech_mk3", "Vendors.LateStartGameCredAvailability", "Items.MilitechParalineEpicMKIII", "Vendors.wat_lch_ripperdoc_01.itemStock") -- VENDOR
+    arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechParalineEpicMKIII") -- DEBUG
 end
-
--- OBJ
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.cyberwareType", CName('Cyberdeck'))
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.displayName", LocKey("MilitechCyberdeckMK3-Name"))
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.friendlyName", "Militech Paraline MK III")
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.iconPath", "cw_system_militechcyberdeck")
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.localizedDescription", LocKey(51730))
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII.OnEquip", {"Items.BaseDeck_inline0","Items.BaseDeck_inline3","Items.MilitechParalineEpicMKIII_inline0","Items.MemoryRegenAbility02","Items.CooldownReductionAbility02"})
-
--- STATS
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII_inline0.stats", {"Items.MilitechParalineEpicMKIII_inline1", "Items.MilitechParalineEpicMKIII_inline2"})
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII_inline1.value", 8)
-TweakDB:SetFlat("Items.MilitechParalineEpicMKIII_inline2.value", 7)
