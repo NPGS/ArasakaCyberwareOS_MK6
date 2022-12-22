@@ -5,13 +5,13 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
     TweakDB:CloneRecord("Items.ArasakaBerserkMK6", "Items.BerserkC4MK5") -- item
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline0", "Items.BerserkC4MK5_inline0") -- require strength
             -- CONSTANT STATS
-            cloneConstantStat("Items.ArasakaBerserkMK6_inline1", "Items.BerserkC4MK5_inline1", 30) -- recoil
-            cloneConstantStat("Items.ArasakaBerserkMK6_inline2", "Items.BerserkC4MK5_inline2", 30) -- sway
-            cloneConstantStat("Items.ArasakaBerserkMK6_inline3", "Items.BerserkC4MK5_inline3", 30) -- melee damage
-            cloneConstantStat("Items.ArasakaBerserkMK6_inline4", "Items.BerserkC4MK5_inline4", 50) -- armor / resistances
-            cloneConstantStat("Items.ArasakaBerserkMK6_inline5", "Items.BerserkC4MK5_inline5", 30) -- duration
-            cloneConstantStat("Items.ArasakaBerserkMK6_inline6", "Items.BerserkC4MK5_inline6", 30) -- cooldown
-            cloneConstantStat("Price.Berserk_MK6", "Price.Berserk", 25)   -- price
+            Ti200.cloneConstantStat("Items.ArasakaBerserkMK6_inline1", "Items.BerserkC4MK5_inline1", 30) -- recoil
+            Ti200.cloneConstantStat("Items.ArasakaBerserkMK6_inline2", "Items.BerserkC4MK5_inline2", 30) -- sway
+            Ti200.cloneConstantStat("Items.ArasakaBerserkMK6_inline3", "Items.BerserkC4MK5_inline3", 30) -- melee damage
+            Ti200.cloneConstantStat("Items.ArasakaBerserkMK6_inline4", "Items.BerserkC4MK5_inline4", 50) -- armor / resistances
+            Ti200.cloneConstantStat("Items.ArasakaBerserkMK6_inline5", "Items.BerserkC4MK5_inline5", 30) -- duration
+            Ti200.cloneConstantStat("Items.ArasakaBerserkMK6_inline6", "Items.BerserkC4MK5_inline6", 30) -- cooldown
+            Ti200.cloneConstantStat("Price.Berserk_MK6", "Price.Berserk", 25)   -- price
     -- LOGIC GROUP 1 HEALING
     TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline8", "Items.BerserkC4MK5_inline8") -- logic package
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline9", "Items.BerserkC4MK5_inline9") -- apply effector effector
@@ -22,13 +22,13 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
     TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline14", "Items.BerserkC4MK5_inline14") -- logic package
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline15", "Items.BerserkC4MK5_inline15") -- stat group effector
             TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline17", "Items.BerserkC4MK5_inline17") -- stat modifier group
-                createConstantStat("Items.ArasakaBerserkMK6_inline18", 'Multiplier', "BaseStats.Health", 1.5) -- constant stat modifier
+                Ti200.createConstantStat("Items.ArasakaBerserkMK6_inline18", 'Multiplier', "BaseStats.Health", 1.5) -- constant stat modifier
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline19", "Items.BerserkC4MK5_inline19") -- uidata
     -- LOGIC GROUP 3 STAMINA
     TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline20", "Items.BerserkC4MK5_inline20") -- logic package
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline21", "Items.BerserkC4MK5_inline21") -- stat group effector
             TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline23", "Items.BerserkC4MK5_inline23") -- stat modifier group
-                createConstantStat("Items.ArasakaBerserkMK6_inline24", 'AdditiveMultiplier', "BaseStats.Stamina", 0.5) -- constant stat modifier
+                Ti200.createConstantStat("Items.ArasakaBerserkMK6_inline24", 'AdditiveMultiplier', "BaseStats.Stamina", 0.5) -- constant stat modifier
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline25", "Items.BerserkC4MK5_inline25") -- uidata
     -- LOGIC GROUP 4 RANGED DAMAGE
     TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline35", "Items.BerserkC2MK4_inline7") -- logic package
@@ -74,7 +74,7 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
         TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline35.UIData", "Items.ArasakaBerserkMK6_inline38")
             TweakDB:SetFlat("Items.ArasakaBerserkMK6_inline38.intValues", {30})
     -- SERVICE
-    createVendorItem("Vendors.wbr_hil_ripdoc_01_zerk_mk6","Vendors.DowntownCredAvailability","Items.ArasakaBerserkMK6","Vendors.wbr_hil_ripdoc_01.itemStock")    -- VENDOR
-    createIcon("Items.ArasakaBerserkMK6", 'arasaka_berserk_icon_01', 'mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas')     -- ICON
-    arrayInsert("Debug.CW_Berserks.items", "Items.ArasakaBerserkMK6")   -- DEBUG
+    Ti200.createVendorItem("Vendors.wbr_hil_ripdoc_01_zerk_mk6","Vendors.DowntownCredAvailability","Items.ArasakaBerserkMK6","Vendors.wbr_hil_ripdoc_01.itemStock")    -- VENDOR
+    Ti200.createIcon("Items.ArasakaBerserkMK6", 'arasaka_berserk_icon_01', 'mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas')     -- ICON
+    Ti200.arrayInsert("Debug.CW_Berserks.items", "Items.ArasakaBerserkMK6")   -- DEBUG
 end

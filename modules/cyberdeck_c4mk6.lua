@@ -4,9 +4,9 @@
 if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
     TweakDB:CloneRecord("Items.MilitechViperLegendaryMKVI", "Items.NetwatchNetdriverLegendaryMKV")   -- item
         TweakDB:CloneRecord("Items.MilitechViperLegendaryMKVI_inline1", "Items.NetwatchNetdriverLegendaryMKV_inline1")   -- logic package
-            cloneConstantStat("Items.MilitechViperLegendaryMKVI_inline2", "Items.NetwatchNetdriverLegendaryMKV_inline2", 16)   -- ram memory size
-            cloneConstantStat("Items.MilitechViperLegendaryMKVI_inline3", "Items.NetwatchNetdriverLegendaryMKV_inline3", 12)   -- buffer size
-        cloneConstantStat("Price.Cyberdeck_MilitechMKVI", "Price.Cyberdeck", 20)    -- price
+            Ti200.cloneConstantStat("Items.MilitechViperLegendaryMKVI_inline2", "Items.NetwatchNetdriverLegendaryMKV_inline2", 16)   -- ram memory size
+            Ti200.cloneConstantStat("Items.MilitechViperLegendaryMKVI_inline3", "Items.NetwatchNetdriverLegendaryMKV_inline3", 12)   -- buffer size
+        Ti200.cloneConstantStat("Price.Cyberdeck_MilitechMKVI", "Price.Cyberdeck", 20)    -- price
     TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.cyberwareType", CName('Cyberdeck'))
     TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.blueprint", "Items.CyberdeckBlueprint8Slots")
     TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Cyberdeck_MilitechMKVI"})
@@ -18,6 +18,6 @@ if TweakDB:GetRecord("Items.MilitechViperLegendaryMKVI") == nil then
     TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI.sellPrice", {"Price.BasePrice","Price.CyberwareSellMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.CraftingTraitMultiplier","Price.IconicMultiplier","Price.Cyberdeck_MilitechMKVI"})
         TweakDB:SetFlat("Items.MilitechViperLegendaryMKVI_inline1.stats", {"Items.MilitechViperLegendaryMKVI_inline2", "Items.MilitechViperLegendaryMKVI_inline3"})
     -- SERVICE
-    createVendorItem("Vendors.wat_lch_ripperdoc_01_viper_mk6","Vendors.DowntownCredAvailability","Items.MilitechViperLegendaryMKVI","Vendors.wat_lch_ripperdoc_01.itemStock")   -- VENDOR
-    arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechViperLegendaryMKVI")    -- DEBUG
+    Ti200.createVendorItem("Vendors.wat_lch_ripperdoc_01_viper_mk6","Vendors.DowntownCredAvailability","Items.MilitechViperLegendaryMKVI","Vendors.wat_lch_ripperdoc_01.itemStock")   -- VENDOR
+    Ti200.arrayInsert("Debug.CW_Cyberdecks.items", "Items.MilitechViperLegendaryMKVI")    -- DEBUG
 end

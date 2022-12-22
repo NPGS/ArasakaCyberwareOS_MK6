@@ -10,8 +10,8 @@ if TweakDB:GetRecord("Items.Recipe_SpecialSandevistanFragment1") == nil then
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment1.quality", "Quality.Legendary")
         TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment1_inline0.item", "Items.SpecialSandevistanFragment1")
     -- SERVICE
-    createVendorItem("Vendors.std_arr_ripperdoc_01_hbl_recipe","Vendors.StreetCredAvailability","Items.Recipe_SpecialSandevistanFragment1","Vendors.std_arr_ripperdoc_01.itemStock")   -- VENDOR
-    arrayInsert("Debug.RecipeCyberwareFragments.items", "Items.Recipe_SpecialSandevistanFragment1")
+    Ti200.createVendorItem("Vendors.std_arr_ripperdoc_01_hbl_recipe","Vendors.StreetCredAvailability","Items.Recipe_SpecialSandevistanFragment1","Vendors.std_arr_ripperdoc_01.itemStock")   -- VENDOR
+    Ti200.arrayInsert("Debug.RecipeCyberwareFragments.items", "Items.Recipe_SpecialSandevistanFragment1")
 end
 
 -- Arasaka Trascendence Recipe
@@ -24,6 +24,6 @@ if TweakDB:GetRecord("Items.Recipe_SpecialSandevistanFragment2") == nil then
     TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2.quality", "Quality.Legendary")
         TweakDB:SetFlat("Items.Recipe_SpecialSandevistanFragment2_inline0.item", "Items.SpecialSandevistanFragment2")
     -- SERVICE
-    createVendorItem("Vendors.wbr_jpn_ripperdoc_02_trasc_recipe","Vendors.StreetCredAvailability","Items.Recipe_SpecialSandevistanFragment2","Vendors.wbr_jpn_ripperdoc_02.itemStock")   -- VENDOR
-    arrayInsert("Debug.RecipeCyberwareFragments.items", "Items.Recipe_SpecialSandevistanFragment2")
+    Ti200.createVendorItem("Vendors.wbr_jpn_ripperdoc_02_trasc_recipe","Vendors.StreetCredAvailability","Items.Recipe_SpecialSandevistanFragment2","Vendors.wbr_jpn_ripperdoc_02.itemStock")   -- VENDOR
+    Ti200.arrayInsert("Debug.RecipeCyberwareFragments.items", "Items.Recipe_SpecialSandevistanFragment2")
 end

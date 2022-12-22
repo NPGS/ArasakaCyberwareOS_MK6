@@ -4,10 +4,10 @@
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK6", "Items.SandevistanC4MK5")    -- item
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_prereq", "Items.SandevistanC4MK5_inline0") -- prereq
-            cloneConstantStat("Items.ArasakaSandevistanMK6_inline1", "Items.SandevistanC4MK5_inline1", 14)  -- duration
-            cloneConstantStat("Items.ArasakaSandevistanMK6_inline2", "Items.SandevistanC4MK5_inline2", 0.04)    -- time dilation
-            cloneConstantStat("Items.ArasakaSandevistanMK6_inline3", "Items.SandevistanC4MK5_inline3", 18)  -- cooldown
-        cloneConstantStat("Price.Sandevistan_MK6_A", "Price.Sandevistan", 35)   -- price
+            Ti200.cloneConstantStat("Items.ArasakaSandevistanMK6_inline1", "Items.SandevistanC4MK5_inline1", 14)  -- duration
+            Ti200.cloneConstantStat("Items.ArasakaSandevistanMK6_inline2", "Items.SandevistanC4MK5_inline2", 0.04)    -- time dilation
+            Ti200.cloneConstantStat("Items.ArasakaSandevistanMK6_inline3", "Items.SandevistanC4MK5_inline3", 18)  -- cooldown
+        Ti200.cloneConstantStat("Price.Sandevistan_MK6_A", "Price.Sandevistan", 35)   -- price
         -- LOGIC PACKAGE 1 (DMG INCREASE)
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline4", "Items.SandevistanC3MK4_inline4") -- logic package
             TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline5", "Items.SandevistanC3MK4_inline5") -- effector effector
@@ -17,8 +17,8 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline10", "Items.SandevistanC4MK5_inline10")   -- logic package
             TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline11", "Items.SandevistanC4MK5_inline11")    -- stat group effector
                 TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline13", "Items.SandevistanC4MK5_inline13")   -- stat modifier group
-                    cloneConstantStat("Items.ArasakaSandevistanMK6_inline14", "Items.SandevistanC4MK5_inline14", 30)   -- constant stat modifier
-                    cloneConstantStat("Items.ArasakaSandevistanMK6_inline15", "Items.SandevistanC4MK5_inline15", 60)   -- constant stat modifier
+                    Ti200.cloneConstantStat("Items.ArasakaSandevistanMK6_inline14", "Items.SandevistanC4MK5_inline14", 30)   -- constant stat modifier
+                    Ti200.cloneConstantStat("Items.ArasakaSandevistanMK6_inline15", "Items.SandevistanC4MK5_inline15", 60)   -- constant stat modifier
             TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline16", "Items.SandevistanC4MK5_inline16")    -- uidata
         -- LOGIC PACKAGE 3 (HEALING)
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline17", "Items.SandevistanC4MK5_inline5") -- logic package
@@ -61,6 +61,6 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
                 TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline20.statusEffect", "BaseStatusEffect.SandevistanPlayerBuff")
         TweakDB:SetFlat("Items.ArasakaSandevistanMK6_inline17.UIData", "Items.ArasakaSandevistanMK6_inline22")
     -- SERVICE
-    createVendorItem("Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6","Vendors.DowntownCredAvailability","Items.ArasakaSandevistanMK6","Vendors.wbr_hil_ripdoc_01.itemStock")    -- VENDOR
-    arrayInsert("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK6")   -- DEBUG
+    Ti200.createVendorItem("Vendors.wbr_hil_ripdoc_01_sandy_hashishin_mk6","Vendors.DowntownCredAvailability","Items.ArasakaSandevistanMK6","Vendors.wbr_hil_ripdoc_01.itemStock")    -- VENDOR
+    Ti200.arrayInsert("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK6")   -- DEBUG
 end

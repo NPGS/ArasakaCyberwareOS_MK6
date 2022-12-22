@@ -4,33 +4,33 @@
 if TweakDB:GetRecord("Items.FuyutsukiCyberdeckMK2_SM") == nil then
     TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM", "Items.SandevistanC1MK1")    -- Item
         TweakDB:CreateRecord("Items.FuyutsukiCyberdeckMK2_SM_inline0", "gamedataGameplayLogicPackage_Record")   -- Logic (Netrunner)
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline1", "Items.MilitechParaline_inline1", 5)   -- RAM
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline2", "Items.MilitechParaline_inline2", 5)  -- Buffer
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline4", "Items.SandevistanC1MK1_inline2", 0.5)  -- Time Scale
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline1", "Items.MilitechParaline_inline1", 5)   -- RAM
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline2", "Items.MilitechParaline_inline2", 5)  -- Buffer
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline4", "Items.SandevistanC1MK1_inline2", 0.5)  -- Time Scale
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK2_SM_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
         TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK2_SM_inline6", "Items.SandevistanC1MK1_inline0")  -- Prereq
-        cloneConstantStat("Price.Cyberdeck_MK2S", "Price.Cyberdeck", 6.5)   -- Price
-    arrayInsert("Items.FuyutsukiCyberdeckMK2_SM.tags", CName('Cyberdeck')) -- Tags
+        Ti200.cloneConstantStat("Price.Cyberdeck_MK2S", "Price.Cyberdeck", 6.5)   -- Price
+    Ti200.arrayInsert("Items.FuyutsukiCyberdeckMK2_SM.tags", CName('Cyberdeck')) -- Tags
     -- SERVICE
-    createVendorItem("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S","Vendors.EarlyStartGameCredAvailability","Items.FuyutsukiCyberdeckMK2_SM","Vendors.wat_lch_ripperdoc_01.itemStock") -- Vendor
-    arrayInsert("Debug.CW_Cyberdecks.items", "Items.FuyutsukiCyberdeckMK2_SM") -- Debug
+    Ti200.createVendorItem("Vendors.wat_lch_ripperdoc_01_fuyDeckMK2S","Vendors.EarlyStartGameCredAvailability","Items.FuyutsukiCyberdeckMK2_SM","Vendors.wat_lch_ripperdoc_01.itemStock") -- Vendor
+    Ti200.arrayInsert("Debug.CW_Cyberdecks.items", "Items.FuyutsukiCyberdeckMK2_SM") -- Debug
 end
 
 -- Fuyutsuki Electronics Mk.3-S
 if TweakDB:GetRecord("Items.FuyutsukiCyberdeckMK3_SM") == nil then
     TweakDB:CloneRecord("Items.FuyutsukiCyberdeckMK3_SM", "Items.SandevistanC1MK1")    -- Item
         TweakDB:CreateRecord("Items.FuyutsukiCyberdeckMK3_SM_inline0", "gamedataGameplayLogicPackage_Record")   -- Logic (Netrunner)
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline1", "Items.MilitechParaline_inline1", 6)   -- RAM
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline2", "Items.MilitechParaline_inline2", 6)  -- Buffer
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline4", "Items.SandevistanC1MK1_inline2", 0.5)  -- Time Scale
-            cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
-        cloneConstantStat("Price.Cyberdeck_MK3S", "Price.Cyberdeck", 7.5)   -- Price
-    arrayInsert("Items.FuyutsukiCyberdeckMK3_SM.tags", CName('Cyberdeck')) -- Tags
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline1", "Items.MilitechParaline_inline1", 6)   -- RAM
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline2", "Items.MilitechParaline_inline2", 6)  -- Buffer
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline3", "Items.SandevistanC1MK1_inline1", 4)  -- Duration
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline4", "Items.SandevistanC1MK1_inline2", 0.5)  -- Time Scale
+            Ti200.cloneConstantStat("Items.FuyutsukiCyberdeckMK3_SM_inline5", "Items.SandevistanC1MK1_inline3", 8)  -- Cooldown
+        Ti200.cloneConstantStat("Price.Cyberdeck_MK3S", "Price.Cyberdeck", 7.5)   -- Price
+    Ti200.arrayInsert("Items.FuyutsukiCyberdeckMK3_SM.tags", CName('Cyberdeck')) -- Tags
     -- SERVICE
-    createVendorItem("Vendors.wat_nid_ripperdoc_01_fuyDeckMK3S","Vendors.EarlyMidGameCredAvailability","Items.FuyutsukiCyberdeckMK3_SM","Vendors.wat_nid_ripperdoc_01.itemStock")   -- Vendor
-    arrayInsert("Debug.CW_Cyberdecks.items", "Items.FuyutsukiCyberdeckMK3_SM") -- Debug
+    Ti200.createVendorItem("Vendors.wat_nid_ripperdoc_01_fuyDeckMK3S","Vendors.EarlyMidGameCredAvailability","Items.FuyutsukiCyberdeckMK3_SM","Vendors.wat_nid_ripperdoc_01.itemStock")   -- Vendor
+    Ti200.arrayInsert("Debug.CW_Cyberdecks.items", "Items.FuyutsukiCyberdeckMK3_SM") -- Debug
 end
 
 local objActionsMk2 = {

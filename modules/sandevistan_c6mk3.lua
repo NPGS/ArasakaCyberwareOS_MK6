@@ -5,14 +5,14 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
     TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3", "Items.SandevistanC2MK3")  -- item
         TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_prereq", "Items.SandevistanC2MK3_inline0")   -- prereq
             -- CONSTANT STATS
-            cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline1", "Items.SandevistanC2MK3_inline1", 16)    -- duration
-            cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline2", "Items.SandevistanC2MK3_inline2", 0.3)   -- time dilation
-            cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline3", "Items.SandevistanC2MK3_inline3", 20)    -- cooldown
+            Ti200.cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline1", "Items.SandevistanC2MK3_inline1", 16)    -- duration
+            Ti200.cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline2", "Items.SandevistanC2MK3_inline2", 0.3)   -- time dilation
+            Ti200.cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline3", "Items.SandevistanC2MK3_inline3", 20)    -- cooldown
         -- CRIT CHANCE LOGIC
         TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline4", "Items.SandevistanC1MK3_inline4")         -- LOGIC PACKAGE
             TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline5", "Items.SandevistanC1MK3_inline5")     -- EFFECTOR EFFECTOR
                 TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline7", "Items.SandevistanC1MK3_inline7") -- STAT MODIFIER GROUP
-                    cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline8", "Items.SandevistanC1MK3_inline8", 20) -- CRIT CHANCE
+                    Ti200.cloneConstantStat("Items.FuyutsukiSandevistanMK3_inline8", "Items.SandevistanC1MK3_inline8", 20) -- CRIT CHANCE
             TweakDB:CloneRecord("Items.FuyutsukiSandevistanMK3_inline9", "Items.SandevistanC1MK3_inline9")     -- UIDATA
     -- ITEM
     TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3.cyberwareType", CName('Sandevistan'))
@@ -30,7 +30,7 @@ if TweakDB:GetRecord("Items.FuyutsukiSandevistanMK3") == nil then
                 TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline7.statModifiers", {"Items.FuyutsukiSandevistanMK3_inline8"})
         TweakDB:SetFlat("Items.FuyutsukiSandevistanMK3_inline4.UIData", "Items.FuyutsukiSandevistanMK3_inline9")
     -- SERVICE
-    createVendorItem("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3", "Vendors.LateStartGameCredAvailability", "Items.FuyutsukiSandevistanMK3", "Vendors.wat_kab_ripperdoc_03.itemStock")    -- VENDOR
-    createIcon("Items.FuyutsukiSandevistanMK3", 'fuyutsuki_sandevistan_icon_01', 'mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas')    -- ICON
-    arrayInsert("Debug.CW_Sandevistans.items", "Items.FuyutsukiSandevistanMK3") -- DEBUG
+    Ti200.createVendorItem("Vendors.wat_kab_ripperdoc_03_sandy_ninja_mk3", "Vendors.LateStartGameCredAvailability", "Items.FuyutsukiSandevistanMK3", "Vendors.wat_kab_ripperdoc_03.itemStock")    -- VENDOR
+    Ti200.createIcon("Items.FuyutsukiSandevistanMK3", 'fuyutsuki_sandevistan_icon_01', 'mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas')    -- ICON
+    Ti200.arrayInsert("Debug.CW_Sandevistans.items", "Items.FuyutsukiSandevistanMK3") -- DEBUG
 end

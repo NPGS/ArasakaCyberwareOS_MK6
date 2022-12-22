@@ -16,7 +16,7 @@
 
 		-- RESISTANCES FOR BERSERK Mk.6
 		if TweakDB:GetRecord("Items.BerserkResistances05") == nil then
-			createConstantStat("Items.BerserkResistances05", "Additive", "BaseStats.BerserkResistancesBonus", 50)
+			Ti200.createConstantStat("Items.BerserkResistances05", "Additive", "BaseStats.BerserkResistancesBonus", 50)
 		end
 
 	-- MELEE DAMAGE DMG ADD
@@ -28,7 +28,7 @@
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.refStat", "BaseStats.BerserkMeleeDamageBonus")
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.statType", "BaseStats.EffectiveDPS")
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.value", 0.01)
-		arrayInsert("BaseStatusEffect.BerserkPlayerBuff_inline19.statModifiers", "BaseStatusEffect.BerserkPlayerBuff_melee_dmg")
+		Ti200.arrayInsert("BaseStatusEffect.BerserkPlayerBuff_inline19.statModifiers", "BaseStatusEffect.BerserkPlayerBuff_melee_dmg")
 	end
 
 
@@ -40,16 +40,16 @@
 		TweakDB:SetFlat("Items.BerserkBase_cooldown_fix.value", 1)
 		TweakDB:SetFlat("Items.BerserkBase.statModifiers", {"Items.BerserkBase_inline3","Items.BerserkBase_cooldown_fix"})
 		TweakDB:SetFlat("BaseStatusEffect.BerserkCooldown_inline0.statModifiers", {"BaseStatusEffect.CyberwareCooldownDuration_inline0","BaseStatusEffect.BerserkCooldown_inline1","BaseStatusEffect.BerserkCooldown_inline2"})
-		arrayInsert("Items.BerserkC1MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC1MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC1MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC2MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC2MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC2MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC2MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC3MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC3MK5.statModifiers", "Items.BerserkBase_cooldown_fix")
-		arrayInsert("Items.BerserkC4MK5.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC1MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC1MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC1MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC2MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC2MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC2MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC2MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC3MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC3MK5.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.arrayInsert("Items.BerserkC4MK5.statModifiers", "Items.BerserkBase_cooldown_fix")
 	end
 
 
@@ -74,7 +74,7 @@
 		TweakDB:CreateRecord("Items.BerserkCarryCapacity05", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
 			TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline0", "Items.BerserkC4MK5_inline15")	-- STAT GROUP EFFECTOR
 				TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline1", "Items.BerserkC4MK5_inline17")	-- STAT MODIFIER GROUP
-					cloneConstantStat("Items.BerserkCarryCapacity05_inline2", "Items.TitaniumInfusedBonesCommon_inline1", 0.5)	-- CONSTANT STAT MODIFIER
+					Ti200.cloneConstantStat("Items.BerserkCarryCapacity05_inline2", "Items.TitaniumInfusedBonesCommon_inline1", 0.5)	-- CONSTANT STAT MODIFIER
 			TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline3", "Items.TitaniumInfusedBonesCommon_inline2")	-- UIDATA
 		TweakDB:SetFlat("Items.BerserkCarryCapacity05.effectors", {"Items.BerserkCarryCapacity05_inline0"})
 			TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline0.statGroup", "Items.BerserkCarryCapacity05_inline1")

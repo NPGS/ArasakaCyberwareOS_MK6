@@ -4,9 +4,9 @@
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
     TweakDB:CloneRecord("Items.ArasakaSandevistanMK3", "Items.SandevistanC2MK3")
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_prereq", "Items.SandevistanC2MK3_inline0") -- prereq
-            cloneConstantStat("Items.ArasakaSandevistanMK3_inline1", "Items.SandevistanC2MK3_inline1", 12) -- duration
-            cloneConstantStat("Items.ArasakaSandevistanMK3_inline2", "Items.SandevistanC2MK3_inline2", 0.4) -- time dilation
-            cloneConstantStat("Items.ArasakaSandevistanMK3_inline3", "Items.SandevistanC2MK3_inline3", 12) -- cooldown
+            Ti200.cloneConstantStat("Items.ArasakaSandevistanMK3_inline1", "Items.SandevistanC2MK3_inline1", 12) -- duration
+            Ti200.cloneConstantStat("Items.ArasakaSandevistanMK3_inline2", "Items.SandevistanC2MK3_inline2", 0.4) -- time dilation
+            Ti200.cloneConstantStat("Items.ArasakaSandevistanMK3_inline3", "Items.SandevistanC2MK3_inline3", 12) -- cooldown
         -- LOGIC PACKAGE 3 (HEALING)
         TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_inline4", "Items.SandevistanC4MK5_inline5") -- logic package
             TweakDB:CloneRecord("Items.ArasakaSandevistanMK3_inline5", "Items.SandevistanC4MK5_inline6") -- apply effector effector
@@ -32,6 +32,6 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK3") == nil then
                 TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline7.statusEffect", "BaseStatusEffect.SandevistanPlayerBuff")
         TweakDB:SetFlat("Items.ArasakaSandevistanMK3_inline4.UIData", "Items.ArasakaSandevistanMK3_inline9")
     -- SERVICE
-    createVendorItem("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3","Vendors.LateStartGameCredAvailability","Items.ArasakaSandevistanMK3","Vendors.cct_dtn_ripdoc_01.itemStock") -- VENDOR
-    arrayInsert("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK3")   -- DEBUG
+    Ti200.createVendorItem("Vendors.cct_dtn_ripdoc_01_sandy_arasaka_mk3","Vendors.LateStartGameCredAvailability","Items.ArasakaSandevistanMK3","Vendors.cct_dtn_ripdoc_01.itemStock") -- VENDOR
+    Ti200.arrayInsert("Debug.CW_Sandevistans.items", "Items.ArasakaSandevistanMK3")   -- DEBUG
 end
