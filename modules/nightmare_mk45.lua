@@ -63,6 +63,7 @@ if TweakDB:GetRecord("Items.KangTaoAcidMK6_M") == nil then
     Ti200.arrayInsert("Items.KangTaoAcidMK6_M.tags", CName('Cyberdeck')) -- Tags
     -- SERVICE
     Ti200.createVendorItem("Vendors.std_arr_ripperdoc_01_acid_mk6","Vendors.DowntownCredAvailability","Items.KangTaoAcidMK6_M","Vendors.std_arr_ripperdoc_01.itemStock")-- Vendor
+    Ti200.createIcon("Items.KangTaoAcidMK6_M", "kangtao_acid_icon_01", "mod\\gameplay\\gui\\common\\icons\\arasaka_cyberware_icons.inkatlas") -- Icon
     Ti200.arrayInsert("Debug.CW_Cyberdecks.items", "Items.KangTaoAcidMK6_M") -- Debug
 end
 
