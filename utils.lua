@@ -20,6 +20,16 @@ function Ti200.createConstantStat(statRecord, modifierType, statType, value)
     TweakDB:SetFlat(statRecord..".value", value)
 end
 
+function Ti200.createCombinedStat(statRecord, modifierType, opSymbol, refObject, refStat, statType, value)
+    TweakDB:CreateRecord(statRecord, "gamedataCombinedStatModifier_Record")
+    TweakDB:SetFlat(statRecord..".modifierType", modifierType)
+    TweakDB:SetFlat(statRecord..".opSymbol", opSymbol)
+    TweakDB:SetFlat(statRecord..".refObject", refObject)
+    TweakDB:SetFlat(statRecord..".refStat", refStat)
+    TweakDB:SetFlat(statRecord..".statType", statType)
+    TweakDB:SetFlat(statRecord..".value", value)
+end
+
 function Ti200.createVendorItem(itemVendorRecord, streetCred, item, vendorItemList)
 	TweakDB:CloneRecord(itemVendorRecord, "Vendors.wat_lch_ripperdoc_01_inline14")
     TweakDB:SetFlat(itemVendorRecord..".availabilityPrereq", streetCred)
