@@ -21,23 +21,14 @@
 
 	-- MELEE DAMAGE DMG ADD
 	if TweakDB:GetRecord("BaseStatusEffect.BerserkPlayerBuff_melee_dmg") == nil then
-		TweakDB:CreateRecord("BaseStatusEffect.BerserkPlayerBuff_melee_dmg", "gamedataCombinedStatModifier_Record")
-		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.modifierType", "AdditiveMultiplier")
-		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.opSymbol", "*")
-		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.refObject", "Player")
-		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.refStat", "BaseStats.BerserkMeleeDamageBonus")
-		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.statType", "BaseStats.EffectiveDPS")
-		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg.value", 0.01)
+		Ti200.createCombinedStat("BaseStatusEffect.BerserkPlayerBuff_melee_dmg", "AdditiveMultiplier", "*", "Player", "BaseStats.BerserkMeleeDamageBonus", "BaseStats.EffectiveDPS", 0.01)
 		Ti200.arrayInsert("BaseStatusEffect.BerserkPlayerBuff_inline19.statModifiers", "BaseStatusEffect.BerserkPlayerBuff_melee_dmg")
 	end
 
 
 	-- UIDATA COOLDOWN FIX (for when 'Chained Berserk' mod is equipped)
 	if TweakDB:GetRecord("Items.BerserkBase_cooldown_fix") == nil then
-		TweakDB:CloneRecord("Items.BerserkBase_cooldown_fix", "Items.SandevistanBase_inline1")
-		TweakDB:SetFlat("Items.BerserkBase_cooldown_fix.refStat", "BaseStats.BerserkCooldownReduction")
-		TweakDB:SetFlat("Items.BerserkBase_cooldown_fix.statType", "BaseStats.BerserkCooldownBase")
-		TweakDB:SetFlat("Items.BerserkBase_cooldown_fix.value", 1)
+		Ti200.createCombinedStat("Items.BerserkBase_cooldown_fix", "Additive", "*", "Self", "BaseStats.BerserkCooldownReduction", "BaseStats.BerserkCooldownBase", 1)
 		TweakDB:SetFlat("Items.BerserkBase.statModifiers", {"Items.BerserkBase_inline3","Items.BerserkBase_cooldown_fix"})
 		TweakDB:SetFlat("BaseStatusEffect.BerserkCooldown_inline0.statModifiers", {"BaseStatusEffect.CyberwareCooldownDuration_inline0","BaseStatusEffect.BerserkCooldown_inline1","BaseStatusEffect.BerserkCooldown_inline2"})
 		Ti200.arrayInsert("Items.BerserkC1MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
