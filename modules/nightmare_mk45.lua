@@ -1,4 +1,5 @@
--- ver. 1.12.4   Arasaka Nightmare Mk.4/5 + NetWatch & Qiant Rage Mk.5 (Hybrid Cyberdeck/Sandevistan OS)
+-- ver. 1.12.4   Legendary/Iconic Hybrid Cyberdeck/Sandevistan OS
+-- Arasaka Nightmare Mk.4/5 + NetWatch & Qiant Rage Mk.5 + Kang Tao Acid Mk.6
 
 -- Arasaka Nightmare Mk.4
 if TweakDB:GetRecord("Items.ArasakaNightmareMK4_M") == nil then
@@ -123,10 +124,11 @@ local objEquipHybridMk6 = {
     "Items.KangTaoAcidMK6_M_inline0",
     "Items.UltimateHacksSpreadAbility",
     "Items.DamageHacksAreaAbility",
+    "Items.MemoryRegenAbility03",
+    "Items.QuickHackDamageAbility03",
     "Items.CooldownReductionAbility03",
     "Items.SpreadingRangeAbility03",
-    "Items.UploadReductionAbility03",
-    "Items.NPCUploadTimeAbility03"
+    "Items.UploadReductionAbility03"
 }
 
 local objStatsMk4 = {
