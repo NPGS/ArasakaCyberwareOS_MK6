@@ -1,4 +1,4 @@
--- ver. 1.0.0   utilities functions
+-- ver. 1.1.0   utilities functions
 
 local Ti200 = {}
 
@@ -77,6 +77,50 @@ function Ti200.enableSlot(slotName)
         end
         return wrappedMethod(slotID, itemType, equipmentArea)
     end)
+end
+
+function Ti200.createSlot(attachmentSlots)
+    local newSlots = {}
+    for i, slot in ipairs(attachmentSlots) do
+        local attachmentSlot = "AttachmentSlots."..slot[i][0].."_M"
+        if TweakDB:GetRecord(attachmentSlot) == nil then
+            TweakDB:CreateRecord(attachmentSlot, "gamedataAttachmentSlot_Record")
+                TweakDB:SetFlat(attachmentSlot..".entitySlotName", slot[i][0])
+                TweakDB:SetFlat(attachmentSlot..".localizedName", slot[i][1])
+                TweakDB:SetFlat(attachmentSlot..".unlockedBy", slot[i][2])
+            Ti200.enableSlot(attachmentSlot)
+            table.insert(newSlots, attachmentSlot)
+        end
+    end
+    return newSlots
+end
+
+function Ti200.createBlueprint(name, slotsArray, attachmentSlots)
+    local blueprintName = "Items."..name
+    local rootElement = blueprintName.."_inline0"
+    for i = 1, attachmentSlot in ipairs(attachmentSlots) do
+        local slotElement = blueprintName.."_inline"..i
+        if TweakDB:GetRecord(slotElement) == nil then
+            TweakDB:CreateRecord(slotElement, "gamedataItemBlueprintElement_Record")
+                TweakDB:SetFlat(slotElement..".slot", attachmentSlot)
+            table.insert(slotsArray, attachmentSlot)
+        end
+    end
+    if TweakDB:GetRecord(blueprintName) == nil then
+        TweakDB:CreateRecord(rootElement, "gamedataItemBlueprintElement_Record")
+            TweakDB:SetFlat(rootElement..".childElements", slotsArray)
+            TweakDB:SetFlat(rootElement..".slot", "AttachmentSlots.GenericItemRoot")
+        TweakDB:CreateRecord(blueprintName, "gamedataItemBlueprint_Record")
+            TweakDB:SetFlat(blueprintName..".rootElement", rootElement)
+    end
+end
+
+function Ti200.addSlotsToMods(mods, slots)
+    for i, modArr in ipairs(mods) do
+        for j, slot in ipairs(slots) do
+            Ti200.arrayInsert(modArr, slot)
+        end
+    end
 end
 
 return Ti200
