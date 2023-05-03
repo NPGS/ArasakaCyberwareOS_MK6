@@ -22,20 +22,20 @@ local berserkSlots = {
 
 local berserkNewSlots = {
     [0] = {
-        [0] = "BerserkSlot4",
-        [1] = "Cyberware Slot",
-        [2] = "Legendary",
-    },
-    [1] = {
-        [0] = "BerserkSlot5",
-        [1] = "Cyberware Slot",
-        [2] = "Legendary",
+        {
+            [0] = "BerserkSlot4",
+            [1] = "Cyberware Slot",
+            [2] = "Legendary",
+        },
+        {
+            [0] = "BerserkSlot5",
+            [1] = "Cyberware Slot",
+            [2] = "Legendary",
+        },
     },
 }
 
-berserkNewSlots = Ti200.createSlot(berserkNewSlots)
-Ti200.createBlueprint("BerserkBlueprintMK6", berserkSlots, berserkNewSlots)
-Ti200.addSlotsToMods(berserkMods, berserkNewSlots)
+Ti200.makeUltraBlueprint(berserkNewSlots, "BerserkBlueprintMK6", berserkSlots, berserkMods, true)
 
 
 -- BLUEPRINT SANDEVISTAN MK6
@@ -59,17 +59,17 @@ local sandevistanSlots = {
 
 local sandevistanNewSlots = {
     [0] = {
-        [0] = "SandevistanSlot4",
-        [1] = "Cyberware Slot",
-        [2] = "Legendary",
-    },
-    [1] = {
-        [0] = "SandevistanSlot5",
-        [1] = "Cyberware Slot",
-        [2] = "Legendary",
-    },
+        {
+            [0] = "SandevistanSlot4",
+            [1] = "Cyberware Slot",
+            [2] = "Legendary",
+        },
+        {
+            [0] = "SandevistanSlot5",
+            [1] = "Cyberware Slot",
+            [2] = "Legendary",
+        },
+    }
 }
 
-sandevistanNewSlots = Ti200.createSlot(sandevistanNewSlots)
-Ti200.createBlueprint("SandevistanBlueprintMK6", sandevistanSlots, sandevistanNewSlots)
-Ti200.addSlotsToMods(sandevistanMods, sandevistanNewSlots)
+Ti200.makeUltraBlueprint(sandevistanNewSlots, "SandevistanBlueprintMK6", sandevistanSlots, sandevistanMods, true)
