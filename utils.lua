@@ -136,6 +136,7 @@ function Ti200.createBlueprint(name, slotsArray, attachmentSlots, mods)
         TweakDB:CreateRecord(blueprintName, "gamedataItemBlueprint_Record")
             TweakDB:SetFlat(blueprintName..".rootElement", rootElement)
     end
+    return blueprintName
 end
 
 function Ti200.makeUltraBlueprint(newSlots, blpName, origSlots, mods, condition)
@@ -143,7 +144,21 @@ function Ti200.makeUltraBlueprint(newSlots, blpName, origSlots, mods, condition)
     if condition == true then
         attachmentSlots = Ti200.createSlot(newSlots)
     end
-    Ti200.createBlueprint(blpName, origSlots, attachmentSlots, mods)
+    local blueprintName = Ti200.createBlueprint(blpName, origSlots, attachmentSlots, mods)
+    return blueprintName
+end
+
+function Ti200.associateRecordToArray(mainArray, record)
+    for i, array in ipairs(mainArray) do
+        Ti200.arrayInsert(array, record)
+    end
+end
+
+function Ti200.createAndAssociateStatToArray(statRecord, modifierType, statType, value, mainArray)
+    if TweakDB:GetRecord(statRecord) == nil then
+        Ti200.createConstantStat(statRecord, modifierType, statType, value)
+        Ti200.associateRecordToArray(mainArray, statRecord)
+    end
 end
 
 return Ti200

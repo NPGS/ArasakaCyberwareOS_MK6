@@ -1,4 +1,4 @@
--- ver. 1.12.4
+-- ver. 1.12.5
 
 -- Arasaka Berserk Mk.6
 if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
@@ -36,7 +36,7 @@ if TweakDB:GetRecord("Items.ArasakaBerserkMK6") == nil then
             TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline37", "Items.BerserkC2MK4_inline10") -- effector
         TweakDB:CloneRecord("Items.ArasakaBerserkMK6_inline38", "Items.BerserkC2MK4_inline11") -- uidata
     -- ASSIGN STATS
-    TweakDB:SetFlat("Items.ArasakaBerserkMK6.blueprint", "Items.BerserkBlueprintMK6")   -- custom blueprint
+    TweakDB:SetFlat("Items.ArasakaBerserkMK6.blueprint", berserkBlueprintMK6)   -- custom blueprint
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Berserk_MK6"})
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.cyberwareType", CName('Berserk'))
     TweakDB:SetFlat("Items.ArasakaBerserkMK6.displayName", LocKey("ArasakaBerserkMK6-Name"))

@@ -1,4 +1,4 @@
--- ver. 1.12.4
+-- ver. 1.12.5
 
 -- Militech "Leopard" Sandevistan Mk.6
 if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
@@ -27,7 +27,7 @@ if TweakDB:GetRecord("Items.MilitechSandevistanMK6") == nil then
             TweakDB:CloneRecord("Items.MilitechSandevistanMK6_inline20", "Items.BerserkC2MK4_inline11") -- uidata
     -- ASSIGN
     TweakDB:SetFlat("Items.MilitechSandevistanMK6.cyberwareType", CName('Sandevistan'))
-    TweakDB:SetFlat("Items.MilitechSandevistanMK6.blueprint", "Items.SandevistanBlueprintMK6")
+    TweakDB:SetFlat("Items.MilitechSandevistanMK6.blueprint", sandevistanBlueprintMK6)
     TweakDB:SetFlat("Items.MilitechSandevistanMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_2"})
     TweakDB:SetFlat("Items.MilitechSandevistanMK6.displayName", LocKey("MilitechSandevistanMK6-Name"))
     TweakDB:SetFlat("Items.MilitechSandevistanMK6.equipPrereqs", {"Items.MilitechSandevistanMK6_prereq"})

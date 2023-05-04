@@ -1,4 +1,4 @@
--- ver. 1.12.4
+-- ver. 1.12.5
 
 -- Sandevistan "Hashishin" Arasaka Mk.6 Prototype
 if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
@@ -29,7 +29,7 @@ if TweakDB:GetRecord("Items.ArasakaSandevistanMK6") == nil then
             TweakDB:CloneRecord("Items.ArasakaSandevistanMK6_inline22", "Items.HealOnKillLegendary_inline6") -- uidata
     -- ASSIGN
     TweakDB:SetFlat("Items.ArasakaSandevistanMK6.cyberwareType", CName('Sandevistan'))
-    TweakDB:SetFlat("Items.ArasakaSandevistanMK6.blueprint", "Items.SandevistanBlueprintMK6")
+    TweakDB:SetFlat("Items.ArasakaSandevistanMK6.blueprint", sandevistanBlueprintMK6)
     TweakDB:SetFlat("Items.ArasakaSandevistanMK6.buyPrice", {"Price.BasePrice","Price.BuyMultiplier","Price.Cyberware","Price.CyberwareQualityMultiplier","Price.IconicMultiplier","Price.Sandevistan_MK6_A"})
     TweakDB:SetFlat("Items.ArasakaSandevistanMK6.displayName", LocKey("ArasakaSandevistanMK6-Name"))
     TweakDB:SetFlat("Items.ArasakaSandevistanMK6.equipPrereqs", {"Items.ArasakaSandevistanMK6_prereq"})
