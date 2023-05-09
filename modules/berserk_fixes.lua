@@ -2,7 +2,7 @@
 
 -- BERSERK FIXES
 
-	-- RESISTANCES
+	-- ADD RESISTANCES
 
 		-- FIX BERSERKPLAYERBUFF
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_inline21.modifierType", "AdditiveMultiplier")
@@ -15,8 +15,9 @@
 		TweakDB:SetFlat("BaseStatusEffect.BerserkPlayerBuff_inline26.refObject", "Player")
 
 		-- RESISTANCES FOR BERSERK Mk.6
-		if TweakDB:GetRecord("Items.BerserkResistances05") == nil then
-			Ti200.createConstantStat("Items.BerserkResistances05", "Additive", "BaseStats.BerserkResistancesBonus", 50)
+		berserkResistancesMK6 = "Items.BerserkResistances05"
+		if TweakDB:GetRecord(berserkResistancesMK6) == nil then
+			Ti200.createConstantStat(berserkResistancesMK6, "Additive", "BaseStats.BerserkResistancesBonus", 50)
 		end
 
 	-- MELEE DAMAGE DMG ADD
@@ -26,50 +27,47 @@
 	end
 
 
+	-- STAT MODIFIERS TABLES
+	berserks15 = {
+		"Items.BerserkC1MK1.statModifiers",
+		"Items.BerserkC1MK2.statModifiers",
+		"Items.BerserkC1MK3.statModifiers",
+		"Items.BerserkC2MK1.statModifiers",
+		"Items.BerserkC2MK2.statModifiers",
+		"Items.BerserkC2MK3.statModifiers",
+		"Items.BerserkC2MK4.statModifiers",
+		"Items.BerserkC3MK4.statModifiers",
+		"Items.BerserkC3MK5.statModifiers",
+		"Items.BerserkC4MK5.statModifiers",
+	}
+
+
 	-- UIDATA COOLDOWN FIX (for when 'Chained Berserk' mod is equipped)
-	if TweakDB:GetRecord("Items.BerserkBase_cooldown_fix") == nil then
-		Ti200.createCombinedStat("Items.BerserkBase_cooldown_fix", "Additive", "*", "Self", "BaseStats.BerserkCooldownReduction", "BaseStats.BerserkCooldownBase", 1)
-		TweakDB:SetFlat("Items.BerserkBase.statModifiers", {"Items.BerserkBase_inline3","Items.BerserkBase_cooldown_fix"})
+	cooldownFix = "Items.BerserkBase_cooldown_fix"
+	if TweakDB:GetRecord(cooldownFix) == nil then
+		Ti200.createCombinedStat(cooldownFix, "Additive", "*", "Self", "BaseStats.BerserkCooldownReduction", "BaseStats.BerserkCooldownBase", 1)
+		TweakDB:SetFlat("Items.BerserkBase.statModifiers", {"Items.BerserkBase_inline3", cooldownFix})
 		TweakDB:SetFlat("BaseStatusEffect.BerserkCooldown_inline0.statModifiers", {"BaseStatusEffect.CyberwareCooldownDuration_inline0","BaseStatusEffect.BerserkCooldown_inline1","BaseStatusEffect.BerserkCooldown_inline2"})
-		Ti200.arrayInsert("Items.BerserkC1MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC1MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC1MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC2MK1.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC2MK2.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC2MK3.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC2MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC3MK4.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC3MK5.statModifiers", "Items.BerserkBase_cooldown_fix")
-		Ti200.arrayInsert("Items.BerserkC4MK5.statModifiers", "Items.BerserkBase_cooldown_fix")
+		Ti200.associateRecordToArray(berserks15, cooldownFix)
 	end
 
 
 -- BERSERK MK.6 ADDITIONAL TWEAKS
 
+	-- GLOBAL PREREQ
+	local berserkEffectPrereq = Ti200.createStatusEffectPrereq("berserkGlobalPrereqMK6", "", false, "StatusEffectPrereq", "BaseStatusEffect.BerserkPlayerBuff", "None")
+
 	-- VERY HIGH DAMAGE REDUCTION
-	if TweakDB:GetRecord("Items.BerserkDmgReduction05") == nil then
-		TweakDB:CreateRecord("Items.BerserkDmgReduction05", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
-			TweakDB:CloneRecord("Items.BerserkDmgReduction05_inline0", "Items.BerserkC4MK5_inline9")	-- EFFECTOR EFFECTOR
-				TweakDB:CloneRecord("Items.BerserkDmgReduction05_inline1", "Items.PainReductor_inline2")	-- EFFECTOR
-			TweakDB:CloneRecord("Items.BerserkDmgReduction05_inline2", "Items.PainReductor_inline3")	-- UIDATA
-		TweakDB:SetFlat("Items.BerserkDmgReduction05.effectors", {"Items.BerserkDmgReduction05_inline0"})
-			TweakDB:SetFlat("Items.BerserkDmgReduction05_inline0.effectorToApply", "Items.BerserkDmgReduction05_inline1")
-				TweakDB:SetFlat("Items.BerserkDmgReduction05_inline1.operationType", 'Multiply')
-				TweakDB:SetFlat("Items.BerserkDmgReduction05_inline1.value", 0.5, 'Float')
-		TweakDB:SetFlat("Items.BerserkDmgReduction05.UIData", "Items.BerserkDmgReduction05_inline2")
-			TweakDB:SetFlat("Items.BerserkDmgReduction05_inline2.intValues", {50})	-- UIDATA
+	berserkLowerDmg05 = "Items.BerserkDmgReduction05"
+	if TweakDB:GetRecord(berserkLowerDmg05) == nil then
+		local berserkLowerDmg05UiData = Ti200.createUiData(berserkLowerDmg05, {}, "ability_silenced", {50}, "LocKey#40805", "", {}, {})
+		Ti200.makeEffectorGroupPackage(berserkLowerDmg05, "ApplyEffectorEffector", "ModifyDamageEffector", berserkEffectPrereq, "Prereqs.ProcessHitReceived", "Multiply", 0.5, "Float", berserkLowerDmg05UiData)
 	end
 
 	-- VERY HIGH CARRY CAPACITY
-	if TweakDB:GetRecord("Items.BerserkCarryCapacity05") == nil then
-		TweakDB:CreateRecord("Items.BerserkCarryCapacity05", "gamedataGameplayLogicPackage_Record")	-- LOGIC PACKAGE
-			TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline0", "Items.BerserkC4MK5_inline15")	-- STAT GROUP EFFECTOR
-				TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline1", "Items.BerserkC4MK5_inline17")	-- STAT MODIFIER GROUP
-					Ti200.cloneConstantStat("Items.BerserkCarryCapacity05_inline2", "Items.TitaniumInfusedBonesCommon_inline1", 0.5)	-- CONSTANT STAT MODIFIER
-			TweakDB:CloneRecord("Items.BerserkCarryCapacity05_inline3", "Items.TitaniumInfusedBonesCommon_inline2")	-- UIDATA
-		TweakDB:SetFlat("Items.BerserkCarryCapacity05.effectors", {"Items.BerserkCarryCapacity05_inline0"})
-			TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline0.statGroup", "Items.BerserkCarryCapacity05_inline1")
-				TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline1.statModifiers", {"Items.BerserkCarryCapacity05_inline2"})
-		TweakDB:SetFlat("Items.BerserkCarryCapacity05.UIData", "Items.BerserkCarryCapacity05_inline3")
-			TweakDB:SetFlat("Items.BerserkCarryCapacity05_inline3.intValues", {50})
+	berserkCarrySkill05 = "Items.BerserkCarryCapacity05"
+	if TweakDB:GetRecord(berserkCarrySkill05) == nil then
+		local zerkCarry05 = { Ti200.createConstantStat(berserkCarrySkill05.."_stat0", "AdditiveMultiplier", "BaseStats.CarryCapacity", 0.5) }
+		local zerkCarry05UiData = Ti200.createUiData(berserkCarrySkill05, {}, "ability_silenced", {50}, "LocKey#40830", "", {}, {})
+		Ti200.makeStatGroupPackage(berserkCarrySkill05, "ApplyStatGroupEffector", berserkEffectPrereq, zerkCarry05, zerkCarry05UiData)
 	end
